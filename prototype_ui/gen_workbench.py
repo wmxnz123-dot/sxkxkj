@@ -38,7 +38,7 @@ workbench_content = """        <!-- 右侧内容区 -->
                             <div class="flex flex-col items-center w-1/4">
                                 <div class="w-10 h-10 rounded-full bg-[#409EFF] text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md border-4 border-white">1</div>
                                 <div class="bg-blue-50 rounded-full px-4 py-2 flex items-center gap-3 text-sm border border-blue-100 shadow-sm whitespace-nowrap">
-                                    <span class="text-[#409EFF] font-medium cursor-pointer hover:underline">场景查看</span>
+                                    <span class="text-[#409EFF] font-medium cursor-pointer hover:underline">任务查看</span>
                                     <span class="text-gray-300">|</span>
                                     <span class="text-[#606266] cursor-pointer hover:text-[#409EFF]">我的数据</span>
                                     <span class="text-gray-300">|</span>
@@ -90,17 +90,17 @@ workbench_content = """        <!-- 右侧内容区 -->
                 </div>
 
                 <div class="flex gap-5 flex-1 min-h-[300px]">
-                    <!-- 我的场景 -->
+                    <!-- 我的任务 -->
                     <div class="flex-1 bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-6 flex flex-col">
                         <div class="flex justify-between items-center mb-5">
                             <h2 class="text-[16px] font-bold text-[#303133] flex items-center">
-                                <span class="w-1 h-4 bg-[#409EFF] rounded-full mr-2"></span>我的场景
+                                <span class="w-1 h-4 bg-[#409EFF] rounded-full mr-2"></span>我的任务
                             </h2>
                             <a href="scene_center.html" class="text-sm text-[#409EFF] hover:underline flex items-center">查看更多 <i class="fa-solid fa-angle-right ml-1 text-xs"></i></a>
                         </div>
                         
                         <div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto pr-2">
-                            <!-- 场景卡片 1 -->
+                            <!-- 任务卡片 1 -->
                             <div class="border border-gray-100 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer flex flex-col gap-3 group">
                                 <div class="flex items-start justify-between">
                                     <div class="flex items-center gap-3">
@@ -108,21 +108,21 @@ workbench_content = """        <!-- 右侧内容区 -->
                                             <i class="fa-solid fa-envelope"></i>
                                         </div>
                                         <div>
-                                            <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线场景_20260602002</div>
-                                            <div class="text-xs text-[#909399]">场景编号: CJ20260602002</div>
+                                            <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线任务_20260602002</div>
+                                            <div class="text-xs text-[#909399]">任务编号: CJ20260602002</div>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 bg-[#409EFF] text-white text-xs rounded-full">已授权</span>
                                 </div>
                                 <div class="text-sm text-[#606266] line-clamp-2">
-                                    场景描述: 测试离线场景_20260602002
+                                    任务描述: 测试离线任务_20260602002
                                 </div>
                                 <div class="mt-auto pt-3 border-t border-gray-50 text-xs text-[#909399]">
                                     更新时间: 2026-06-02 13:43:07
                                 </div>
                             </div>
 
-                            <!-- 场景卡片 2 -->
+                            <!-- 任务卡片 2 -->
                             <div class="border border-gray-100 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer flex flex-col gap-3 group">
                                 <div class="flex items-start justify-between">
                                     <div class="flex items-center gap-3">
@@ -130,21 +130,21 @@ workbench_content = """        <!-- 右侧内容区 -->
                                             <i class="fa-solid fa-envelope"></i>
                                         </div>
                                         <div>
-                                            <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线场景_20260602001</div>
-                                            <div class="text-xs text-[#909399]">场景编号: CJ20260602001</div>
+                                            <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线任务_20260602001</div>
+                                            <div class="text-xs text-[#909399]">任务编号: CJ20260602001</div>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 bg-[#409EFF] text-white text-xs rounded-full">已授权</span>
                                 </div>
                                 <div class="text-sm text-[#606266] line-clamp-2">
-                                    场景描述: 测试离线场景_20260602001
+                                    任务描述: 测试离线任务_20260602001
                                 </div>
                                 <div class="mt-auto pt-3 border-t border-gray-50 text-xs text-[#909399]">
                                     更新时间: 2026-06-02 13:30:35
                                 </div>
                             </div>
                             
-                            <!-- 场景卡片 3 -->
+                            <!-- 任务卡片 3 -->
                             <div class="border border-gray-100 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer flex flex-col gap-3 group">
                                 <div class="flex items-start justify-between">
                                     <div class="flex items-center gap-3">
@@ -152,21 +152,21 @@ workbench_content = """        <!-- 右侧内容区 -->
                                             <i class="fa-solid fa-envelope"></i>
                                         </div>
                                         <div>
-                                            <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线场景_20260521003</div>
-                                            <div class="text-xs text-[#909399]">场景编号: CJ20260521003</div>
+                                            <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线任务_20260521003</div>
+                                            <div class="text-xs text-[#909399]">任务编号: CJ20260521003</div>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 bg-[#409EFF] text-white text-xs rounded-full">已授权</span>
                                 </div>
                                 <div class="text-sm text-[#606266] line-clamp-2">
-                                    场景描述: 测试离线场景_20260521003
+                                    任务描述: 测试离线任务_20260521003
                                 </div>
                                 <div class="mt-auto pt-3 border-t border-gray-50 text-xs text-[#909399]">
                                     更新时间: 2026-05-21 16:11:42
                                 </div>
                             </div>
                             
-                            <!-- 场景卡片 4 -->
+                            <!-- 任务卡片 4 -->
                             <div class="border border-gray-100 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer flex flex-col gap-3 group">
                                 <div class="flex items-start justify-between">
                                     <div class="flex items-center gap-3">
@@ -174,14 +174,14 @@ workbench_content = """        <!-- 右侧内容区 -->
                                             <i class="fa-solid fa-envelope"></i>
                                         </div>
                                         <div>
-                                            <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线场景_20260521002</div>
-                                            <div class="text-xs text-[#909399]">场景编号: CJ20260521002</div>
+                                            <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线任务_20260521002</div>
+                                            <div class="text-xs text-[#909399]">任务编号: CJ20260521002</div>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 bg-[#409EFF] text-white text-xs rounded-full">已授权</span>
                                 </div>
                                 <div class="text-sm text-[#606266] line-clamp-2">
-                                    场景描述: 测试离线场景_20260521002
+                                    任务描述: 测试离线任务_20260521002
                                 </div>
                                 <div class="mt-auto pt-3 border-t border-gray-50 text-xs text-[#909399]">
                                     更新时间: 2026-05-21 16:10:11

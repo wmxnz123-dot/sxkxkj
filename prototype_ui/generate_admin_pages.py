@@ -241,7 +241,7 @@ def generate_workbench():
                     <div class="bg-white rounded p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex items-center gap-4">
                         <div class="w-12 h-12 bg-blue-50 text-[#3b82f6] rounded flex items-center justify-center text-2xl"><i class="fa-solid fa-chart-bar"></i></div>
                         <div>
-                            <div class="text-[#909399] text-sm mb-1">场景数量</div>
+                            <div class="text-[#909399] text-sm mb-1">任务数量</div>
                             <div class="text-2xl font-bold text-[#303133]">42</div>
                         </div>
                     </div>
@@ -316,7 +316,7 @@ def generate_workbench():
                                 <thead class="text-[#909399] font-medium border-b border-gray-100">
                                     <tr>
                                         <th class="py-3 px-2 w-16">序号</th>
-                                        <th class="py-3 px-2">场景名称</th>
+                                        <th class="py-3 px-2">任务名称</th>
                                         <th class="py-3 px-2">套餐名称</th>
                                         <th class="py-3 px-2">单位名称</th>
                                         <th class="py-3 px-2">更新时间</th>
@@ -346,21 +346,21 @@ def generate_workbench():
                                     </tr>
                                     <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors">
                                         <td class="py-3 px-2">4</td>
-                                        <td class="py-3 px-2">zh测试场景_0310</td>
+                                        <td class="py-3 px-2">zh测试任务_0310</td>
                                         <td class="py-3 px-2">套餐C（小）,套餐3（小）</td>
                                         <td class="py-3 px-2">山东亿云信息技术有限公司</td>
                                         <td class="py-3 px-2">2026-03-10 11:49:30</td>
                                     </tr>
                                     <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors">
                                         <td class="py-3 px-2">5</td>
-                                        <td class="py-3 px-2">zh测试场景_0224</td>
+                                        <td class="py-3 px-2">zh测试任务_0224</td>
                                         <td class="py-3 px-2">套餐C（小）,套餐3（小）</td>
                                         <td class="py-3 px-2">山东亿云信息技术有限公司</td>
                                         <td class="py-3 px-2">2026-02-24 10:44:03</td>
                                     </tr>
                                     <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors">
                                         <td class="py-3 px-2">6</td>
-                                        <td class="py-3 px-2">多底座套餐场景005_202...</td>
+                                        <td class="py-3 px-2">多底座套餐任务005_202...</td>
                                         <td class="py-3 px-2">套餐C（小）,套餐3（小）</td>
                                         <td class="py-3 px-2">山东亿云信息技术有限公司</td>
                                         <td class="py-3 px-2">2026-02-01 14:21:48</td>
@@ -390,7 +390,7 @@ def generate_test_apply():
                 <!-- 搜索区 -->
                 <div class="bg-white rounded p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex items-center gap-8 shrink-0">
                     <div class="flex items-center gap-3">
-                        <label class="text-[#606266] whitespace-nowrap">场景名称：</label>
+                        <label class="text-[#606266] whitespace-nowrap">任务名称：</label>
                         <input type="text" placeholder="请输入" class="w-[200px] h-8 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6]">
                     </div>
                     <div class="flex items-center gap-3">
@@ -420,8 +420,8 @@ def generate_test_apply():
                             <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
                                 <tr>
                                     <th class="py-3 px-4 w-16">序号</th>
-                                    <th class="py-3 px-4">场景编码</th>
-                                    <th class="py-3 px-4">场景名称</th>
+                                    <th class="py-3 px-4">任务编码</th>
+                                    <th class="py-3 px-4">任务名称</th>
                                     <th class="py-3 px-4">套餐名称</th>
                                     <th class="py-3 px-4">单位名称</th>
                                     <th class="py-3 px-4">状态</th>
@@ -463,7 +463,7 @@ def generate_test_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">4</td>
                                     <td class="py-4 px-4">CJ20260310001</td>
-                                    <td class="py-4 px-4">zh测试场景_0310</td>
+                                    <td class="py-4 px-4">zh测试任务_0310</td>
                                     <td class="py-4 px-4">套餐C（小）,套餐3（...</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#f56c6c]"></i> 开通失败</span></td>
@@ -473,7 +473,7 @@ def generate_test_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">5</td>
                                     <td class="py-4 px-4">CJ20260224001</td>
-                                    <td class="py-4 px-4">zh测试场景_0224</td>
+                                    <td class="py-4 px-4">zh测试任务_0224</td>
                                     <td class="py-4 px-4">套餐C（小）,套餐3（...</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#f56c6c]"></i> 开通失败</span></td>
@@ -503,7 +503,7 @@ def generate_test_apply():
                                         <i class="fa-brands fa-rocketchat"></i>
                                     </div>
                                     <div>
-                                        <div class="text-[18px] font-bold text-[#303133] mb-1">场景名称：山东亿云信息技术有限公...</div>
+                                        <div class="text-[18px] font-bold text-[#303133] mb-1">任务名称：山东亿云信息技术有限公...</div>
                                         <div class="text-[#909399] text-[13px]">单位名称：山东亿云信息技术有限公司</div>
                                     </div>
                                 </div>
@@ -627,7 +627,7 @@ def generate_prod_apply():
                 <!-- 搜索区 -->
                 <div class="bg-white rounded p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex items-center gap-8 shrink-0">
                     <div class="flex items-center gap-3">
-                        <label class="text-[#606266] whitespace-nowrap">场景名称：</label>
+                        <label class="text-[#606266] whitespace-nowrap">任务名称：</label>
                         <input type="text" placeholder="请输入" class="w-[200px] h-8 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6]">
                     </div>
                     <div class="flex items-center gap-3">
@@ -657,8 +657,8 @@ def generate_prod_apply():
                             <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
                                 <tr>
                                     <th class="py-3 px-4 w-16">序号</th>
-                                    <th class="py-3 px-4">场景编码</th>
-                                    <th class="py-3 px-4">场景名称</th>
+                                    <th class="py-3 px-4">任务编码</th>
+                                    <th class="py-3 px-4">任务名称</th>
                                     <th class="py-3 px-4">套餐名称</th>
                                     <th class="py-3 px-4">单位名称</th>
                                     <th class="py-3 px-4">状态 <i class="fa-solid fa-filter text-gray-300 text-[10px] ml-1"></i></th>
@@ -670,7 +670,7 @@ def generate_prod_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">1</td>
                                     <td class="py-4 px-4">CJ20260602002</td>
-                                    <td class="py-4 px-4">测试离线场景_202606020...</td>
+                                    <td class="py-4 px-4">测试离线任务_202606020...</td>
                                     <td class="py-4 px-4">离线镜像包部署（小）</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#67c23a]"></i> 已开通</span></td>
@@ -680,7 +680,7 @@ def generate_prod_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">2</td>
                                     <td class="py-4 px-4">CJ20260602001</td>
-                                    <td class="py-4 px-4">测试离线场景_202606020...</td>
+                                    <td class="py-4 px-4">测试离线任务_202606020...</td>
                                     <td class="py-4 px-4">离线镜像包部署（小）</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#67c23a]"></i> 已开通</span></td>
@@ -690,7 +690,7 @@ def generate_prod_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">3</td>
                                     <td class="py-4 px-4">CJ20260521003</td>
-                                    <td class="py-4 px-4">测试离线场景_202605210...</td>
+                                    <td class="py-4 px-4">测试离线任务_202605210...</td>
                                     <td class="py-4 px-4">隐私计算PIR查询开发...</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -700,7 +700,7 @@ def generate_prod_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">4</td>
                                     <td class="py-4 px-4">CJ20260521002</td>
-                                    <td class="py-4 px-4">测试离线场景_202605210...</td>
+                                    <td class="py-4 px-4">测试离线任务_202605210...</td>
                                     <td class="py-4 px-4">隐私计算PIR查询开发...</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -710,7 +710,7 @@ def generate_prod_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">5</td>
                                     <td class="py-4 px-4">CJ20260521001</td>
-                                    <td class="py-4 px-4">测试离线场景_202605210...</td>
+                                    <td class="py-4 px-4">测试离线任务_202605210...</td>
                                     <td class="py-4 px-4">隐私计算PIR查询开发...</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -720,7 +720,7 @@ def generate_prod_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">6</td>
                                     <td class="py-4 px-4">CJ20262220003</td>
-                                    <td class="py-4 px-4">隐私计算场景_222003</td>
+                                    <td class="py-4 px-4">隐私计算任务_222003</td>
                                     <td class="py-4 px-4">隐私计算PIR查询开发...</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#67c23a]"></i> 已开通</span></td>
@@ -761,7 +761,7 @@ def generate_test_recycle():
                 <!-- 搜索区 -->
                 <div class="bg-white rounded p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex items-center gap-8 shrink-0">
                     <div class="flex items-center gap-3">
-                        <label class="text-[#606266] whitespace-nowrap">场景名称：</label>
+                        <label class="text-[#606266] whitespace-nowrap">任务名称：</label>
                         <input type="text" placeholder="请输入" class="w-[200px] h-8 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6]">
                     </div>
                     <div class="flex items-center gap-3">
@@ -791,8 +791,8 @@ def generate_test_recycle():
                             <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
                                 <tr>
                                     <th class="py-3 px-4 w-16">序号</th>
-                                    <th class="py-3 px-4">场景编码</th>
-                                    <th class="py-3 px-4">场景名称</th>
+                                    <th class="py-3 px-4">任务编码</th>
+                                    <th class="py-3 px-4">任务名称</th>
                                     <th class="py-3 px-4">套餐名称</th>
                                     <th class="py-3 px-4">回收类型</th>
                                     <th class="py-3 px-4">单位名称</th>
@@ -804,7 +804,7 @@ def generate_test_recycle():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">1</td>
                                     <td class="py-4 px-4">CJ20260126002</td>
-                                    <td class="py-4 px-4">隐私计算套餐场景_202601...</td>
+                                    <td class="py-4 px-4">隐私计算套餐任务_202601...</td>
                                     <td class="py-4 px-4">隐私计算画布低代码...</td>
                                     <td class="py-4 px-4">自动回收</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -859,7 +859,7 @@ def generate_prod_recycle():
                 <!-- 搜索区 -->
                 <div class="bg-white rounded p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex items-center gap-8 shrink-0">
                     <div class="flex items-center gap-3">
-                        <label class="text-[#606266] whitespace-nowrap">场景名称：</label>
+                        <label class="text-[#606266] whitespace-nowrap">任务名称：</label>
                         <input type="text" placeholder="请输入" class="w-[200px] h-8 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6]">
                     </div>
                     <div class="flex items-center gap-3">
@@ -889,8 +889,8 @@ def generate_prod_recycle():
                             <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
                                 <tr>
                                     <th class="py-3 px-4 w-16">序号</th>
-                                    <th class="py-3 px-4">场景编码</th>
-                                    <th class="py-3 px-4">场景名称</th>
+                                    <th class="py-3 px-4">任务编码</th>
+                                    <th class="py-3 px-4">任务名称</th>
                                     <th class="py-3 px-4">套餐名称</th>
                                     <th class="py-3 px-4">回收类型</th>
                                     <th class="py-3 px-4">单位名称</th>
@@ -902,7 +902,7 @@ def generate_prod_recycle():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">1</td>
                                     <td class="py-4 px-4">CJ20260126001</td>
-                                    <td class="py-4 px-4">亿云测试场景_20260126_...</td>
+                                    <td class="py-4 px-4">亿云测试任务_20260126_...</td>
                                     <td class="py-4 px-4">离线镜像包部署（大）</td>
                                     <td class="py-4 px-4">手动回收</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -912,7 +912,7 @@ def generate_prod_recycle():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">2</td>
                                     <td class="py-4 px-4">CJ20260126002</td>
-                                    <td class="py-4 px-4">隐私计算套餐场景_202601...</td>
+                                    <td class="py-4 px-4">隐私计算套餐任务_202601...</td>
                                     <td class="py-4 px-4">隐私计算画布低代码...</td>
                                     <td class="py-4 px-4">手动回收</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -967,7 +967,7 @@ def generate_data_resource_apply():
                 <!-- 搜索区 -->
                 <div class="bg-white rounded p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex items-center gap-8 shrink-0">
                     <div class="flex items-center gap-3">
-                        <label class="text-[#606266] whitespace-nowrap">场景名称：</label>
+                        <label class="text-[#606266] whitespace-nowrap">任务名称：</label>
                         <input type="text" placeholder="请输入" class="w-[200px] h-8 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6]">
                     </div>
                     <div class="flex items-center gap-3">
@@ -996,9 +996,9 @@ def generate_data_resource_apply():
                             <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
                                 <tr>
                                     <th class="py-3 px-4 w-16">序号</th>
-                                    <th class="py-3 px-4">场景编码</th>
-                                    <th class="py-3 px-4">场景名称</th>
-                                    <th class="py-3 px-4">场景版本号</th>
+                                    <th class="py-3 px-4">任务编码</th>
+                                    <th class="py-3 px-4">任务名称</th>
+                                    <th class="py-3 px-4">任务版本号</th>
                                     <th class="py-3 px-4">单位名称</th>
                                     <th class="py-3 px-4">状态 <i class="fa-solid fa-filter text-gray-300 text-[10px] ml-1"></i></th>
                                     <th class="py-3 px-4 flex items-center gap-1">更新时间 <i class="fa-solid fa-sort text-gray-300"></i></th>
@@ -1009,7 +1009,7 @@ def generate_data_resource_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">1</td>
                                     <td class="py-4 px-4">CJ20260602002</td>
-                                    <td class="py-4 px-4">测试离线场景_202606020...</td>
+                                    <td class="py-4 px-4">测试离线任务_202606020...</td>
                                     <td class="py-4 px-4">01</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -1019,7 +1019,7 @@ def generate_data_resource_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">2</td>
                                     <td class="py-4 px-4">CJ20260602002</td>
-                                    <td class="py-4 px-4">测试离线场景_202606020...</td>
+                                    <td class="py-4 px-4">测试离线任务_202606020...</td>
                                     <td class="py-4 px-4">01</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -1029,7 +1029,7 @@ def generate_data_resource_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">3</td>
                                     <td class="py-4 px-4">CJ20260602002</td>
-                                    <td class="py-4 px-4">测试离线场景_202606020...</td>
+                                    <td class="py-4 px-4">测试离线任务_202606020...</td>
                                     <td class="py-4 px-4">01</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -1039,7 +1039,7 @@ def generate_data_resource_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">4</td>
                                     <td class="py-4 px-4">CJ20260602002</td>
-                                    <td class="py-4 px-4">测试离线场景_202606020...</td>
+                                    <td class="py-4 px-4">测试离线任务_202606020...</td>
                                     <td class="py-4 px-4">01</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -1049,7 +1049,7 @@ def generate_data_resource_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">5</td>
                                     <td class="py-4 px-4">CJ20260602001</td>
-                                    <td class="py-4 px-4">测试离线场景_202606020...</td>
+                                    <td class="py-4 px-4">测试离线任务_202606020...</td>
                                     <td class="py-4 px-4">01</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -1059,7 +1059,7 @@ def generate_data_resource_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">6</td>
                                     <td class="py-4 px-4">CJ20260521003</td>
-                                    <td class="py-4 px-4">测试离线场景_202605210...</td>
+                                    <td class="py-4 px-4">测试离线任务_202605210...</td>
                                     <td class="py-4 px-4">01</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -1069,7 +1069,7 @@ def generate_data_resource_apply():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">7</td>
                                     <td class="py-4 px-4">CJ20260521002</td>
-                                    <td class="py-4 px-4">测试离线场景_202605210...</td>
+                                    <td class="py-4 px-4">测试离线任务_202605210...</td>
                                     <td class="py-4 px-4">01</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
                                     <td class="py-4 px-4"><span class="flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i> 开通中</span></td>
@@ -1099,7 +1099,7 @@ def generate_data_resource_apply():
                                         <i class="fa-brands fa-rocketchat"></i>
                                     </div>
                                     <div>
-                                        <div class="text-[18px] font-bold text-[#303133] mb-1">场景名称：测试离线场景_2026060...</div>
+                                        <div class="text-[18px] font-bold text-[#303133] mb-1">任务名称：测试离线任务_2026060...</div>
                                         <div class="text-[#909399] text-[13px]">单位名称：山东亿云信息技术有限公司</div>
                                     </div>
                                 </div>
@@ -1117,15 +1117,15 @@ def generate_data_resource_apply():
                             <h3 class="font-bold text-[#303133] text-[15px] mb-4">基本信息</h3>
                             <div class="grid grid-cols-2 gap-y-4 text-[13px]">
                                 <div class="flex">
-                                    <span class="text-[#909399] w-24">场景名称：</span>
-                                    <span class="text-[#303133] flex-1">测试离线场景_20260602002</span>
+                                    <span class="text-[#909399] w-24">任务名称：</span>
+                                    <span class="text-[#303133] flex-1">测试离线任务_20260602002</span>
                                 </div>
                                 <div class="flex">
-                                    <span class="text-[#909399] w-24">场景编码：</span>
+                                    <span class="text-[#909399] w-24">任务编码：</span>
                                     <span class="text-[#303133] flex-1">CJ20260602002</span>
                                 </div>
                                 <div class="flex">
-                                    <span class="text-[#909399] w-24">场景版本：</span>
+                                    <span class="text-[#909399] w-24">任务版本：</span>
                                     <span class="text-[#303133] flex-1">01</span>
                                 </div>
                                 <div class="flex">
@@ -1388,7 +1388,7 @@ def generate_global_model_manage():
                                 <tr>
                                     <th class="py-3 px-4 w-16">序号</th>
                                     <th class="py-3 px-4">模型名称</th>
-                                    <th class="py-3 px-4">关联场景</th>
+                                    <th class="py-3 px-4">关联任务</th>
                                     <th class="py-3 px-4">所属单位</th>
                                     <th class="py-3 px-4 flex items-center gap-1">发布时间 <i class="fa-solid fa-sort text-gray-300"></i></th>
                                     <th class="py-3 px-4 w-20">操作</th>
@@ -1398,7 +1398,7 @@ def generate_global_model_manage():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">1</td>
                                     <td class="py-4 px-4">社保核验模型_0420</td>
-                                    <td class="py-4 px-4">zh测试场景_0310</td>
+                                    <td class="py-4 px-4">zh测试任务_0310</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-04-21 10:37:11</td>
                                     <td class="py-4 px-4 text-[#3b82f6]"><a href="#" class="hover:underline">查看</a></td>
@@ -1406,7 +1406,7 @@ def generate_global_model_manage():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">2</td>
                                     <td class="py-4 px-4">zh0319001模型</td>
-                                    <td class="py-4 px-4">zh测试场景_0310</td>
+                                    <td class="py-4 px-4">zh测试任务_0310</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-03-19 15:06:34</td>
                                     <td class="py-4 px-4 text-[#3b82f6]"><a href="#" class="hover:underline">查看</a></td>
@@ -1414,7 +1414,7 @@ def generate_global_model_manage():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">3</td>
                                     <td class="py-4 px-4">lxmceshimodel0311</td>
-                                    <td class="py-4 px-4">多底座套餐场景001_20260201</td>
+                                    <td class="py-4 px-4">多底座套餐任务001_20260201</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-03-11 14:30:24</td>
                                     <td class="py-4 px-4 text-[#3b82f6]"><a href="#" class="hover:underline">查看</a></td>
@@ -1422,7 +1422,7 @@ def generate_global_model_manage():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">4</td>
                                     <td class="py-4 px-4">zhou模型测试_0310001</td>
-                                    <td class="py-4 px-4">zh测试场景_0310</td>
+                                    <td class="py-4 px-4">zh测试任务_0310</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-03-11 17:06:00</td>
                                     <td class="py-4 px-4 text-[#3b82f6]"><a href="#" class="hover:underline">查看</a></td>
@@ -1430,7 +1430,7 @@ def generate_global_model_manage():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">5</td>
                                     <td class="py-4 px-4">模型名称：306002</td>
-                                    <td class="py-4 px-4">多底座套餐场景004_20260201</td>
+                                    <td class="py-4 px-4">多底座套餐任务004_20260201</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-03-06 13:56:29</td>
                                     <td class="py-4 px-4 text-[#3b82f6]"><a href="#" class="hover:underline">查看</a></td>
@@ -1438,7 +1438,7 @@ def generate_global_model_manage():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">6</td>
                                     <td class="py-4 px-4">模型名称:306-001</td>
-                                    <td class="py-4 px-4">多底座套餐场景004_20260201</td>
+                                    <td class="py-4 px-4">多底座套餐任务004_20260201</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-03-11 11:21:59</td>
                                     <td class="py-4 px-4 text-[#3b82f6]"><a href="#" class="hover:underline">查看</a></td>
@@ -1446,7 +1446,7 @@ def generate_global_model_manage():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">7</td>
                                     <td class="py-4 px-4">模型名称：cs303-001-已修改</td>
-                                    <td class="py-4 px-4">多底座套餐场景005_20260201</td>
+                                    <td class="py-4 px-4">多底座套餐任务005_20260201</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-03-03 10:36:34</td>
                                     <td class="py-4 px-4 text-[#3b82f6]"><a href="#" class="hover:underline">查看</a></td>
@@ -1477,7 +1477,7 @@ def generate_encapsulated_capability():
                 <!-- 搜索区 -->
                 <div class="bg-white rounded p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex items-center gap-8 shrink-0">
                     <div class="flex items-center gap-3">
-                        <label class="text-[#606266] whitespace-nowrap">场景名称：</label>
+                        <label class="text-[#606266] whitespace-nowrap">任务名称：</label>
                         <input type="text" placeholder="请输入" class="w-[200px] h-8 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6]">
                     </div>
                     <div class="flex items-center gap-3">
@@ -1506,8 +1506,8 @@ def generate_encapsulated_capability():
                             <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
                                 <tr>
                                     <th class="py-3 px-4 w-16">序号</th>
-                                    <th class="py-3 px-4">场景编码</th>
-                                    <th class="py-3 px-4">场景名称</th>
+                                    <th class="py-3 px-4">任务编码</th>
+                                    <th class="py-3 px-4">任务名称</th>
                                     <th class="py-3 px-4">能力名称</th>
                                     <th class="py-3 px-4">能力类型</th>
                                     <th class="py-3 px-4">单位名称</th>
@@ -1520,7 +1520,7 @@ def generate_encapsulated_capability():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">1</td>
                                     <td class="py-4 px-4">CJ202604210001</td>
-                                    <td class="py-4 px-4">zh测试场景_0310</td>
+                                    <td class="py-4 px-4">zh测试任务_0310</td>
                                     <td class="py-4 px-4">123</td>
                                     <td class="py-4 px-4">API</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -1531,7 +1531,7 @@ def generate_encapsulated_capability():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">2</td>
                                     <td class="py-4 px-4">CJ202604100003</td>
-                                    <td class="py-4 px-4">zh测试场景_0310</td>
+                                    <td class="py-4 px-4">zh测试任务_0310</td>
                                     <td class="py-4 px-4">数据1</td>
                                     <td class="py-4 px-4">数据</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -1542,7 +1542,7 @@ def generate_encapsulated_capability():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">3</td>
                                     <td class="py-4 px-4">CJ202604100002</td>
-                                    <td class="py-4 px-4">zh测试场景_0310</td>
+                                    <td class="py-4 px-4">zh测试任务_0310</td>
                                     <td class="py-4 px-4">数据1</td>
                                     <td class="py-4 px-4">数据</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -1553,7 +1553,7 @@ def generate_encapsulated_capability():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">4</td>
                                     <td class="py-4 px-4">CJ202604100001</td>
-                                    <td class="py-4 px-4">zh测试场景_0310</td>
+                                    <td class="py-4 px-4">zh测试任务_0310</td>
                                     <td class="py-4 px-4">模型测试</td>
                                     <td class="py-4 px-4">模型</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -1564,7 +1564,7 @@ def generate_encapsulated_capability():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">5</td>
                                     <td class="py-4 px-4">CJ202604030003</td>
-                                    <td class="py-4 px-4">多底座套餐场景001_20260201</td>
+                                    <td class="py-4 px-4">多底座套餐任务001_20260201</td>
                                     <td class="py-4 px-4">能力名称：306-001</td>
                                     <td class="py-4 px-4">模型</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -1575,7 +1575,7 @@ def generate_encapsulated_capability():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">6</td>
                                     <td class="py-4 px-4">CJ202604030002</td>
-                                    <td class="py-4 px-4">多底座套餐场景001_20260201</td>
+                                    <td class="py-4 px-4">多底座套餐任务001_20260201</td>
                                     <td class="py-4 px-4">能力名称：306-001</td>
                                     <td class="py-4 px-4">模型</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -1586,7 +1586,7 @@ def generate_encapsulated_capability():
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">7</td>
                                     <td class="py-4 px-4">CJ202604030001</td>
-                                    <td class="py-4 px-4">多底座套餐场景001_20260201</td>
+                                    <td class="py-4 px-4">多底座套餐任务001_20260201</td>
                                     <td class="py-4 px-4">能力名称：306-001</td>
                                     <td class="py-4 px-4">模型</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限...</td>
@@ -2254,7 +2254,7 @@ def generate_space_usage_manage():
                 <!-- 搜索区 -->
                 <div class="bg-white rounded p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex items-center gap-8 shrink-0">
                     <div class="flex items-center gap-3">
-                        <label class="text-[#606266] whitespace-nowrap">场景名称：</label>
+                        <label class="text-[#606266] whitespace-nowrap">任务名称：</label>
                         <input type="text" placeholder="请输入" class="w-[200px] h-8 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6]">
                     </div>
                     <div class="flex items-center gap-3">
@@ -2282,7 +2282,7 @@ def generate_space_usage_manage():
                             <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
                                 <tr>
                                     <th class="py-3 px-4 w-16">序号</th>
-                                    <th class="py-3 px-4">场景名称</th>
+                                    <th class="py-3 px-4">任务名称</th>
                                     <th class="py-3 px-4">开发方名称</th>
                                     <th class="py-3 px-4">更新时间 <i class="fa-solid fa-sort text-gray-300"></i></th>
                                     <th class="py-3 px-4 text-center">操作</th>
@@ -2291,7 +2291,7 @@ def generate_space_usage_manage():
                             <tbody>
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">1</td>
-                                    <td class="py-4 px-4">测试离线场景_20260602002</td>
+                                    <td class="py-4 px-4">测试离线任务_20260602002</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-06-02 13:43:07</td>
                                     <td class="py-4 px-4 text-center">
@@ -2300,7 +2300,7 @@ def generate_space_usage_manage():
                                 </tr>
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">2</td>
-                                    <td class="py-4 px-4">测试离线场景_20260602001</td>
+                                    <td class="py-4 px-4">测试离线任务_20260602001</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-06-02 13:30:35</td>
                                     <td class="py-4 px-4 text-center">
@@ -2309,7 +2309,7 @@ def generate_space_usage_manage():
                                 </tr>
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">3</td>
-                                    <td class="py-4 px-4">测试离线场景_20260521003</td>
+                                    <td class="py-4 px-4">测试离线任务_20260521003</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-05-21 11:48:31</td>
                                     <td class="py-4 px-4 text-center">
@@ -2318,7 +2318,7 @@ def generate_space_usage_manage():
                                 </tr>
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">4</td>
-                                    <td class="py-4 px-4">测试离线场景_20260521002</td>
+                                    <td class="py-4 px-4">测试离线任务_20260521002</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-05-21 11:43:54</td>
                                     <td class="py-4 px-4 text-center">
@@ -2327,7 +2327,7 @@ def generate_space_usage_manage():
                                 </tr>
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">5</td>
-                                    <td class="py-4 px-4">测试离线场景_20260521001</td>
+                                    <td class="py-4 px-4">测试离线任务_20260521001</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-05-21 11:03:50</td>
                                     <td class="py-4 px-4 text-center">
@@ -2336,7 +2336,7 @@ def generate_space_usage_manage():
                                 </tr>
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">6</td>
-                                    <td class="py-4 px-4">隐私计算场景_222003</td>
+                                    <td class="py-4 px-4">隐私计算任务_222003</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-05-12 18:33:13</td>
                                     <td class="py-4 px-4 text-center">
@@ -2345,7 +2345,7 @@ def generate_space_usage_manage():
                                 </tr>
                                 <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
                                     <td class="py-4 px-4">7</td>
-                                    <td class="py-4 px-4">山东亿云信息技术有限公司离线场景_0222003</td>
+                                    <td class="py-4 px-4">山东亿云信息技术有限公司离线任务_0222003</td>
                                     <td class="py-4 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-4 px-4">2026-05-12 18:03:43</td>
                                     <td class="py-4 px-4 text-center">
@@ -2375,7 +2375,7 @@ def generate_space_usage_manage():
                                         <i class="fa-solid fa-folder-open"></i>
                                     </div>
                                     <div>
-                                        <div class="text-[18px] font-bold text-[#303133] mb-1">场景名称：测试离线场景_20260602002</div>
+                                        <div class="text-[18px] font-bold text-[#303133] mb-1">任务名称：测试离线任务_20260602002</div>
                                         <div class="text-[#909399] text-[13px]">单位名称：山东亿云信息技术有限公司</div>
                                     </div>
                                 </div>
@@ -3353,8 +3353,8 @@ def generate_model_deploy_work_order():
                                             <span class="text-[#3b82f6] flex-1">sbhy04201/sbhy04201:1.0</span>
                                         </div>
                                         <div class="flex">
-                                            <span class="text-[#909399] w-36">场景名称：</span>
-                                            <span class="text-[#303133] flex-1">zh测试场景_0310</span>
+                                            <span class="text-[#909399] w-36">任务名称：</span>
+                                            <span class="text-[#303133] flex-1">zh测试任务_0310</span>
                                         </div>
                                         <div class="flex">
                                             <span class="text-[#909399] w-36">cpu限制（Core）：</span>
@@ -3649,8 +3649,8 @@ def generate_model_change_work_order():
                                             <span class="text-[#3b82f6] flex-1">sbhy04201/sbhy04201:1.1</span>
                                         </div>
                                         <div class="flex">
-                                            <span class="text-[#909399] w-36">场景名称：</span>
-                                            <span class="text-[#303133] flex-1">zh测试场景_0310</span>
+                                            <span class="text-[#909399] w-36">任务名称：</span>
+                                            <span class="text-[#303133] flex-1">zh测试任务_0310</span>
                                         </div>
                                     </div>
                                 </div>
@@ -3735,8 +3735,8 @@ def generate_cap_pack_work_order():
                             <input type="text" placeholder="请输入能力名称" class="h-8 w-64 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6] transition-colors">
                         </div>
                         <div class="flex items-center gap-3">
-                            <label class="text-[#606266] text-[13px] whitespace-nowrap">场景名称</label>
-                            <input type="text" placeholder="请输入场景名称" class="h-8 w-64 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6] transition-colors">
+                            <label class="text-[#606266] text-[13px] whitespace-nowrap">任务名称</label>
+                            <input type="text" placeholder="请输入任务名称" class="h-8 w-64 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6] transition-colors">
                         </div>
                         <div class="flex items-center gap-3">
                             <label class="text-[#606266] text-[13px] whitespace-nowrap">所属方</label>
@@ -3765,7 +3765,7 @@ def generate_cap_pack_work_order():
                                 <tr>
                                     <th class="py-3 px-4 w-16 text-center">序号</th>
                                     <th class="py-3 px-4">能力名称</th>
-                                    <th class="py-3 px-4">场景名称</th>
+                                    <th class="py-3 px-4">任务名称</th>
                                     <th class="py-3 px-4">所属方</th>
                                     <th class="py-3 px-4 text-center">状态</th>
                                     <th class="py-3 px-4">申请时间</th>
@@ -3776,7 +3776,7 @@ def generate_cap_pack_work_order():
                                 <tr class="hover:bg-gray-50 transition-colors">
                                     <td class="py-3 px-4 text-center">1</td>
                                     <td class="py-3 px-4">306001</td>
-                                    <td class="py-3 px-4">公积金数据场景_0815</td>
+                                    <td class="py-3 px-4">公积金数据任务_0815</td>
                                     <td class="py-3 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-3 px-4 text-center">
                                         <span class="inline-flex items-center justify-center h-6 px-2.5 bg-blue-50 text-blue-600 rounded-sm text-[12px] border border-blue-200">
@@ -3857,8 +3857,8 @@ def generate_cap_pack_work_order():
                                             <span class="text-[#303133] flex-1">306001</span>
                                         </div>
                                         <div class="flex">
-                                            <span class="text-[#909399] w-24">场景名称：</span>
-                                            <span class="text-[#303133] flex-1">公积金数据场景_0815</span>
+                                            <span class="text-[#909399] w-24">任务名称：</span>
+                                            <span class="text-[#303133] flex-1">公积金数据任务_0815</span>
                                         </div>
                                         <div class="flex">
                                             <span class="text-[#909399] w-24">功能测试报告：</span>
@@ -4027,7 +4027,7 @@ def generate_resource_alert():
                 <div class="bg-white rounded-lg p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] shrink-0">
                     <div class="flex gap-6">
                         <div class="flex items-center gap-3">
-                            <label class="text-[#606266] text-[13px] whitespace-nowrap">场景名称：</label>
+                            <label class="text-[#606266] text-[13px] whitespace-nowrap">任务名称：</label>
                             <input type="text" placeholder="请输入" class="h-8 w-64 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#3b82f6] transition-colors">
                         </div>
                         <div class="flex items-center gap-3">
@@ -4065,7 +4065,7 @@ def generate_resource_alert():
                             <thead class="bg-[#f8f8f9] text-[#909399] font-medium sticky top-0 z-10 shadow-[0_1px_0_0_#f0f0f0]">
                                 <tr>
                                     <th class="py-3 px-4 w-16 text-center">序号</th>
-                                    <th class="py-3 px-4 w-[20%]">场景名称</th>
+                                    <th class="py-3 px-4 w-[20%]">任务名称</th>
                                     <th class="py-3 px-4 w-[15%]">告警底座</th>
                                     <th class="py-3 px-4 w-[15%]">开发方名称</th>
                                     <th class="py-3 px-4 w-[25%]">消息内容</th>
@@ -4075,7 +4075,7 @@ def generate_resource_alert():
                             <tbody class="divide-y divide-gray-100">
                                 <tr class="hover:bg-gray-50 transition-colors">
                                     <td class="py-3 px-4 text-center">1</td>
-                                    <td class="py-3 px-4">zh测试场景_0310</td>
+                                    <td class="py-3 px-4">zh测试任务_0310</td>
                                     <td class="py-3 px-4">离线沙箱</td>
                                     <td class="py-3 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-3 px-4 text-[#303133]">套餐共有5个离线镜像资源，还剩下1个可用!</td>
@@ -4083,7 +4083,7 @@ def generate_resource_alert():
                                 </tr>
                                 <tr class="hover:bg-gray-50 transition-colors">
                                     <td class="py-3 px-4 text-center">2</td>
-                                    <td class="py-3 px-4">多底座套餐场景004_20260201</td>
+                                    <td class="py-3 px-4">多底座套餐任务004_20260201</td>
                                     <td class="py-3 px-4">离线沙箱</td>
                                     <td class="py-3 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-3 px-4 text-[#303133]">套餐共有5个离线镜像资源，还剩下1个可用!</td>
@@ -4091,7 +4091,7 @@ def generate_resource_alert():
                                 </tr>
                                 <tr class="hover:bg-gray-50 transition-colors">
                                     <td class="py-3 px-4 text-center">3</td>
-                                    <td class="py-3 px-4">公积金数据场景</td>
+                                    <td class="py-3 px-4">公积金数据任务</td>
                                     <td class="py-3 px-4">在线沙箱</td>
                                     <td class="py-3 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-3 px-4 text-[#303133]">融合计算底座计算任务还剩下5个可用!</td>
@@ -4099,7 +4099,7 @@ def generate_resource_alert():
                                 </tr>
                                 <tr class="hover:bg-gray-50 transition-colors">
                                     <td class="py-3 px-4 text-center">4</td>
-                                    <td class="py-3 px-4">公积金数据场景</td>
+                                    <td class="py-3 px-4">公积金数据任务</td>
                                     <td class="py-3 px-4">在线沙箱</td>
                                     <td class="py-3 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-3 px-4 text-[#303133]">告警消息告警消息告警消息</td>
@@ -4107,7 +4107,7 @@ def generate_resource_alert():
                                 </tr>
                                 <tr class="hover:bg-gray-50 transition-colors">
                                     <td class="py-3 px-4 text-center">5</td>
-                                    <td class="py-3 px-4">公积金数据场景</td>
+                                    <td class="py-3 px-4">公积金数据任务</td>
                                     <td class="py-3 px-4">在线沙箱</td>
                                     <td class="py-3 px-4">山东亿云信息技术有限公司</td>
                                     <td class="py-3 px-4 text-[#303133]">测试测试测试</td>

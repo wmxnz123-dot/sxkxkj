@@ -554,7 +554,7 @@ def generate_data_resources():
             <!-- 面包屑 -->
             <div class="h-[52px] flex items-center px-6 text-[#606266] shrink-0 bg-white border-b border-gray-100 text-[14px]">
                 <i class="fa-solid fa-house mr-2 text-gray-400"></i>
-                <span class="font-medium text-[#303133]">场景主页</span>
+                <span class="font-medium text-[#303133]">任务主页</span>
             </div>
 
             <!-- 核心内容容器 -->
@@ -564,7 +564,7 @@ def generate_data_resources():
                 <div class="w-[200px] bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] shrink-0 flex flex-col py-2">
                     <a href="scene_detail.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
                         <i class="fa-solid fa-border-all w-6 text-center mr-2 text-lg"></i>
-                        场景详情
+                        任务详情
                     </a>
                     <a href="package_resources.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
                         <i class="fa-solid fa-layer-group w-6 text-center mr-2 text-lg"></i>
@@ -809,7 +809,7 @@ def generate_data_resources():
                                             <span class="text-[#303133] flex-1">--</span>
                                         </div>
                                         <div class="flex col-span-2">
-                                            <span class="text-[#909399] w-28 text-right pr-4">应用场景</span>
+                                            <span class="text-[#909399] w-28 text-right pr-4">应用任务</span>
                                             <span class="text-[#303133] flex-1">--</span>
                                         </div>
                                         <div class="flex col-span-2">
@@ -1101,7 +1101,7 @@ def generate_data_resources():
                                             <span class="text-[#303133] flex-1">--</span>
                                         </div>
                                         <div class="flex">
-                                            <span class="text-[#909399] w-28 text-right pr-4">使用场景说明</span>
+                                            <span class="text-[#909399] w-28 text-right pr-4">使用任务说明</span>
                                             <span class="text-[#303133] flex-1">0429</span>
                                         </div>
                                         <div class="flex col-span-2">
@@ -1224,7 +1224,7 @@ def generate_dev_team():
             <!-- 面包屑 -->
             <div class="h-[52px] flex items-center px-6 text-[#606266] shrink-0 bg-white border-b border-gray-100 text-[14px]">
                 <i class="fa-solid fa-house mr-2 text-gray-400"></i>
-                <span class="font-medium text-[#303133]">场景主页</span>
+                <span class="font-medium text-[#303133]">任务主页</span>
             </div>
 
             <!-- 核心内容容器 -->
@@ -1234,7 +1234,7 @@ def generate_dev_team():
                 <div class="w-[200px] bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] shrink-0 flex flex-col py-2">
                     <a href="scene_detail.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
                         <i class="fa-solid fa-border-all w-6 text-center mr-2 text-lg"></i>
-                        场景详情
+                        任务详情
                     </a>
                     <a href="package_resources.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
                         <i class="fa-solid fa-layer-group w-6 text-center mr-2 text-lg"></i>

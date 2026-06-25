@@ -12,12 +12,12 @@ welcome_new = """                <!-- 欢迎头部 -->
                     <img src="./images/img01.png" class="absolute right-10 bottom-0 h-[140px] object-contain z-0 pointer-events-none" alt="welcome">"""
 content = content.replace(welcome_old, welcome_new)
 
-# 2. 场景导航 -> 任务导航 + 背景图
-nav_old = """                <!-- 场景导航 -->
+# 2. 任务导航 -> 任务导航 + 背景图
+nav_old = """                <!-- 任务导航 -->
                 <div class="bg-gradient-to-r from-[#eef2ff] to-[#e6f0ff] rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-6 relative overflow-hidden">
                     <div class="absolute right-0 top-0 h-full w-[600px] opacity-20 pointer-events-none" style="background: url('./images/nav-bg.png') no-repeat right center / cover;"></div>
                     <div class="flex items-center relative z-10">
-                        <h2 class="text-[16px] font-bold text-[#1c7ffd] mr-8 whitespace-nowrap">场景导航</h2>"""
+                        <h2 class="text-[16px] font-bold text-[#1c7ffd] mr-8 whitespace-nowrap">任务导航</h2>"""
 nav_new = """                <!-- 任务导航 -->
                 <div class="bg-gradient-to-r from-[#eef2ff] to-[#e6f0ff] rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-6 relative overflow-hidden">
                     <img src="./images/img02.png" class="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none z-0" alt="nav-bg">
@@ -44,8 +44,8 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                                 <i class="fa-solid fa-envelope"></i>
                                             </div>
                                             <div class="flex flex-col">
-                                                <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线场景...">测试离线场景...</span>
-                                                <span class="text-[#909399] text-[12px] mt-0.5">场景编号：CJ20260602002</span>
+                                                <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线任务...">测试离线任务...</span>
+                                                <span class="text-[#909399] text-[12px] mt-0.5">任务编号：CJ20260602002</span>
                                             </div>
                                         </div>
                                         <div class="bg-[#1c7ffd] text-white px-2 py-0.5 rounded-full text-[11px] flex items-center shadow-sm whitespace-nowrap">
@@ -54,7 +54,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                     </div>
                                     <div class="border-b border-gray-100 mb-3 group-hover:border-blue-100 transition-colors duration-300"></div>
                                     <div class="flex flex-col gap-1.5 mb-auto">
-                                        <span class="text-[#606266] text-[13px] truncate" title="场景描述：测试离线场景_20260602002">场景描述：测试离线场景_20260602002</span>
+                                        <span class="text-[#606266] text-[13px] truncate" title="任务描述：测试离线任务_20260602002">任务描述：测试离线任务_20260602002</span>
                                         <div class="flex items-center gap-6 text-[#909399] text-[13px] mt-1">
                                             <span>数据资源数量：12</span>
                                             <span>开发人数：1</span>
@@ -65,7 +65,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                             更新时间：2026-06-02 13:30:35
                                         </div>
                                         <div class="absolute inset-0 flex items-center gap-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                                            <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">场景详情</a>
+                                            <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">任务详情</a>
                                             <a href="package_resources.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">套餐资源</a>
                                             <a href="#" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">数据资源</a>
                                             <a href="#" class="flex-1 text-center py-1.5 bg-[#1c7ffd] border border-[#1c7ffd] rounded text-white hover:bg-blue-600 text-[12px] transition-colors shadow-sm cursor-pointer">开发者</a>
@@ -89,8 +89,8 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                                 <i class="fa-solid fa-envelope"></i>
                                             </div>
                                             <div class="flex flex-col">
-                                                <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线场景...">测试离线场景...</span>
-                                                <span class="text-[#909399] text-[12px] mt-0.5">场景编号：CJ20260602001</span>
+                                                <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线任务...">测试离线任务...</span>
+                                                <span class="text-[#909399] text-[12px] mt-0.5">任务编号：CJ20260602001</span>
                                             </div>
                                         </div>
                                         <div class="bg-[#1c7ffd] text-white px-2 py-0.5 rounded-full text-[11px] flex items-center shadow-sm whitespace-nowrap">
@@ -99,7 +99,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                     </div>
                                     <div class="border-b border-gray-100 mb-3 group-hover:border-blue-100 transition-colors duration-300"></div>
                                     <div class="flex flex-col gap-1.5 mb-auto">
-                                        <span class="text-[#606266] text-[13px] truncate" title="场景描述：测试离线场景_20260602001">场景描述：测试离线场景_20260602001</span>
+                                        <span class="text-[#606266] text-[13px] truncate" title="任务描述：测试离线任务_20260602001">任务描述：测试离线任务_20260602001</span>
                                         <div class="flex items-center gap-6 text-[#909399] text-[13px] mt-1">
                                             <span>数据资源数量：3</span>
                                             <span>开发人数：1</span>
@@ -110,7 +110,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                             更新时间：2026-06-02 13:30:35
                                         </div>
                                         <div class="absolute inset-0 flex items-center gap-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                                            <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">场景详情</a>
+                                            <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">任务详情</a>
                                             <a href="package_resources.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">套餐资源</a>
                                             <a href="#" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">数据资源</a>
                                             <a href="#" class="flex-1 text-center py-1.5 bg-[#1c7ffd] border border-[#1c7ffd] rounded text-white hover:bg-blue-600 text-[12px] transition-colors shadow-sm cursor-pointer">开发者</a>
@@ -134,8 +134,8 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                                 <i class="fa-solid fa-envelope"></i>
                                             </div>
                                             <div class="flex flex-col">
-                                                <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线场景...">测试离线场景...</span>
-                                                <span class="text-[#909399] text-[12px] mt-0.5">场景编号：CJ20260521003</span>
+                                                <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线任务...">测试离线任务...</span>
+                                                <span class="text-[#909399] text-[12px] mt-0.5">任务编号：CJ20260521003</span>
                                             </div>
                                         </div>
                                         <div class="bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full text-[11px] flex items-center shadow-sm whitespace-nowrap">
@@ -144,7 +144,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                     </div>
                                     <div class="border-b border-gray-100 mb-3 group-hover:border-blue-100 transition-colors duration-300"></div>
                                     <div class="flex flex-col gap-1.5 mb-auto">
-                                        <span class="text-[#606266] text-[13px] truncate" title="场景描述：测试离线场景_20260521003">场景描述：测试离线场景_20260521003</span>
+                                        <span class="text-[#606266] text-[13px] truncate" title="任务描述：测试离线任务_20260521003">任务描述：测试离线任务_20260521003</span>
                                         <div class="flex items-center gap-6 text-[#909399] text-[13px] mt-1">
                                             <span>数据资源数量：3</span>
                                             <span>开发人数：1</span>
@@ -155,7 +155,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                             更新时间：2026-05-21 11:48:31
                                         </div>
                                         <div class="absolute inset-0 flex items-center gap-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                                            <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">场景详情</a>
+                                            <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">任务详情</a>
                                             <a href="package_resources.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">套餐资源</a>
                                             <a href="#" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">数据资源</a>
                                             <a href="#" class="flex-1 text-center py-1.5 bg-[#1c7ffd] border border-[#1c7ffd] rounded text-white hover:bg-blue-600 text-[12px] transition-colors shadow-sm cursor-pointer">开发者</a>

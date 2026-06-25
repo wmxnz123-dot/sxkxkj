@@ -216,7 +216,7 @@ drawer3 = """
                     <div class="w-8 h-8 rounded-full bg-blue-50 text-[#1c7ffd] flex items-center justify-center text-sm">
                         <i class="fa-solid fa-database"></i>
                     </div>
-                    <h2 class="text-xl font-bold text-[#303133]">数据集名称：测试隐私计算套餐场景001_20260130</h2>
+                    <h2 class="text-xl font-bold text-[#303133]">数据集名称：测试隐私计算套餐任务001_20260130</h2>
                 </div>
                 <div class="flex justify-between items-center text-sm text-[#909399] ml-11">
                     <span>单位名称：山东亿云信息技术有限公司</span>
@@ -230,7 +230,7 @@ drawer3 = """
                 <div>
                     <h3 class="font-bold text-[#303133] mb-4 text-[15px]">基本信息</h3>
                     <div class="p-2 flex flex-col gap-5 text-[14px]">
-                        <div class="flex"><span class="w-[100px] text-[#909399]">文件名称：</span><span class="text-[#303133]">测试隐私计算套餐场景001_20260130结果文件.csv</span></div>
+                        <div class="flex"><span class="w-[100px] text-[#909399]">文件名称：</span><span class="text-[#303133]">测试隐私计算套餐任务001_20260130结果文件.csv</span></div>
                         <div class="flex"><span class="w-[100px] text-[#909399]">文件大小：</span><span class="text-[#303133]">1000000</span></div>
                         <div class="flex"><span class="w-[100px] text-[#909399]">下载地址：</span><span class="text-[#303133]">http://8.130.83.144:8000/test/result20260130.csv</span></div>
                         <div class="flex"><span class="w-[100px] text-[#909399]">是否封装：</span><span class="text-[#303133]">是</span></div>
@@ -300,7 +300,7 @@ drawer4 = """
                     <div class="flex flex-col gap-5 px-2">
                         <div class="flex"><span class="w-[140px] text-[#909399]">模型名称：</span><span class="text-[#303133]">社保核验模型_0420</span></div>
                         <div class="flex"><span class="w-[140px] text-[#909399]">模型镜像：</span><span class="text-[#1c7ffd] hover:underline cursor-pointer">sbhy04201/sbhy04201:1.0</span></div>
-                        <div class="flex"><span class="w-[140px] text-[#909399]">场景名称：</span><span class="text-[#303133]">zh测试场景_0310</span></div>
+                        <div class="flex"><span class="w-[140px] text-[#909399]">任务名称：</span><span class="text-[#303133]">zh测试任务_0310</span></div>
                         <div class="flex"><span class="w-[140px] text-[#909399]">cpu限制 (Core)：</span><span class="text-[#303133]">0.1</span></div>
                         <div class="flex"><span class="w-[140px] text-[#909399]">cpu预留 (Core)：</span><span class="text-[#303133]">0.1</span></div>
                         <div class="flex"><span class="w-[140px] text-[#909399]">内存限制 (Mi)：</span><span class="text-[#303133]">128</span></div>
