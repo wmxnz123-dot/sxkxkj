@@ -47,7 +47,7 @@ def get_dev_base_html(title, main_content, current_page):
                     <i class="fa-solid fa-border-all w-6 text-center text-lg"></i>
                     <span class="ml-2">开发工作台</span>
                 </a>
-                <a href="scene_center.html" class="flex items-center px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="scene_center.html,index.html,package_resources.html,data_resources.html">
+                <a href="scene_center.html" class="flex items-center px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="scene_center.html,scene_detail.html,package_resources.html,data_resources.html">
                     <i class="fa-regular fa-folder-open w-6 text-center text-lg"></i>
                     <span class="ml-2">任务中心</span>
                 </a>
@@ -562,7 +562,7 @@ def generate_data_resources():
                 
                 <!-- 左侧菜单卡片 -->
                 <div class="w-[200px] bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] shrink-0 flex flex-col py-2">
-                    <a href="index.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
+                    <a href="scene_detail.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
                         <i class="fa-solid fa-border-all w-6 text-center mr-2 text-lg"></i>
                         场景详情
                     </a>
@@ -1217,7 +1217,7 @@ def generate_data_resources():
                 </div>
             </div>
 """
-    return get_dev_base_html("加工资源", content, "scene_center.html,index.html,package_resources.html,data_resources.html")
+    return get_dev_base_html("加工资源", content, "scene_center.html,scene_detail.html,package_resources.html,data_resources.html")
 
 def generate_dev_team():
     content = """
@@ -1232,7 +1232,7 @@ def generate_dev_team():
                 
                 <!-- 左侧菜单卡片 -->
                 <div class="w-[200px] bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] shrink-0 flex flex-col py-2">
-                    <a href="index.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
+                    <a href="scene_detail.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
                         <i class="fa-solid fa-border-all w-6 text-center mr-2 text-lg"></i>
                         场景详情
                     </a>
@@ -1312,7 +1312,7 @@ def generate_dev_team():
                 </div>
             </div>
 """
-    return get_dev_base_html("开发团队", content, "scene_center.html,index.html,package_resources.html,data_resources.html,dev_team.html")
+    return get_dev_base_html("开发团队", content, "scene_center.html,scene_detail.html,package_resources.html,data_resources.html,dev_team.html")
 
 if __name__ == "__main__":
     with open("my_front_db.html", "w", encoding="utf-8") as f:

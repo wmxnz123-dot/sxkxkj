@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>协作开发平台 - 能力管理</title>
+    <title>协作开发平台 - 任务详情</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        /* 自定义滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
     </style>
 </head>
 <body class="h-screen w-screen flex flex-col overflow-hidden bg-[#f0f2f5] text-[14px] text-gray-700">
@@ -66,7 +79,7 @@
                 <!-- 部署封装 -->
                 <div class="flex flex-col nav-group">
                     <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
-                        <div class="flex items-center">
+                        <div class="flex items-center"> 
                             <i class="fa-solid fa-box w-6 text-center text-lg"></i>
                             <span class="ml-2">部署封装</span>
                         </div>
@@ -216,143 +229,188 @@
         </script>
 
         <!-- 右侧内容区 -->
-        <main class="flex-1 flex flex-col overflow-hidden relative">
-            <!-- 面包屑 -->
-            <div class="h-[52px] flex items-center px-6 text-[#606266] shrink-0 bg-transparent text-sm border-b border-gray-100 bg-white">
-                <span>工作台</span>
-                <span class="mx-2">/</span>
-                <span class="text-[#303133] font-medium">能力管理</span>
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <!-- 面包屑 / 页面标题 -->
+            <div class="h-[52px] flex items-center px-6 text-[#606266] shrink-0 bg-transparent">
+                <i class="fa-solid fa-house mr-2 text-gray-400 text-sm"></i>
+                <span>任务主页</span>
             </div>
 
             <!-- 核心内容容器 -->
-            <div class="flex-1 p-6 flex flex-col gap-4 overflow-y-auto">
-                <!-- 搜索区 -->
-                <div class="bg-white rounded shadow-sm p-5 flex justify-between items-center shrink-0 border border-gray-100">
-                    <div class="flex items-center gap-8">
-                        <div class="flex items-center gap-3">
-                            <span class="text-[#606266]">模型名称：</span>
-                            <input type="text" placeholder="请输入" class="border border-gray-300 rounded px-3 py-1.5 text-sm w-[220px] focus:outline-none focus:border-[#1c7ffd] transition-colors placeholder-gray-300">
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-[#606266]">场景名称：</span>
-                            <input type="text" placeholder="请输入" class="border border-gray-300 rounded px-3 py-1.5 text-sm w-[220px] focus:outline-none focus:border-[#1c7ffd] transition-colors placeholder-gray-300">
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <button class="px-4 py-1.5 border border-gray-300 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] transition-colors text-sm flex items-center gap-1.5 bg-white">
-                            <i class="fa-solid fa-rotate-right"></i> 重置
-                        </button>
-                        <button class="px-4 py-1.5 bg-[#1c7ffd] border border-[#1c7ffd] rounded text-white hover:bg-blue-500 transition-colors text-sm flex items-center gap-1.5 shadow-sm">
-                            <i class="fa-solid fa-magnifying-glass"></i> 查询
-                        </button>
-                    </div>
+            <div class="flex-1 px-6 pb-6 flex gap-5 overflow-hidden">
+                
+                <!-- 二级菜单卡片 -->
+                <div class="w-[200px] bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-2.5 flex flex-col gap-1 shrink-0 h-fit">
+                    <a href="scene_detail.html" class="flex items-center px-4 py-3 bg-blue-50 text-[#1c7ffd] rounded-md font-medium">
+                        <i class="fa-solid fa-border-all w-6 text-center mr-2 text-lg"></i>
+                        任务详情
+                    </a>
+                    <a href="package_resources.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
+                        <i class="fa-solid fa-layer-group w-6 text-center mr-2 text-lg"></i>
+                        套餐资源
+                    </a>
+                    <a href="data_resources.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
+                        <i class="fa-solid fa-chart-line w-6 text-center mr-2 text-lg"></i>
+                        数据资源
+                    </a>
+                    <a href="dev_team.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
+                        <i class="fa-solid fa-users w-6 text-center mr-2 text-lg"></i>
+                        开发团队
+                    </a>
                 </div>
 
-                <!-- 列表区 -->
-                <div class="bg-white rounded shadow-sm p-5 flex-1 border border-gray-100 flex flex-col">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-[16px] font-bold text-[#303133]">模型列表</h3>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-rotate-right text-gray-400 hover:text-[#1c7ffd] cursor-pointer ml-2"></i>
-                            <i class="fa-solid fa-arrows-up-down text-gray-400 hover:text-[#1c7ffd] cursor-pointer"></i>
-                            <i class="fa-solid fa-gear text-gray-400 hover:text-[#1c7ffd] cursor-pointer"></i>
+                <!-- 详情内容卡片 -->
+                <div class="flex-1 flex flex-col gap-5 overflow-y-auto pr-1">
+                    
+                    <!-- 头部信息卡片 -->
+                    <div class="bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-6 flex justify-between items-start">
+                        <div class="flex flex-col gap-4">
+                            <h1 class="text-[20px] font-bold text-[#303133]">任务名称：单位公积金开户</h1>
+                            <span class="text-[#909399]">任务编号：CJ20250714001</span>
+                        </div>
+                        <div class="flex flex-col items-end gap-4">
+                            <div class="bg-[#1c7ffd] text-white px-3 py-1 rounded-full text-xs flex items-center shadow-sm">
+                                <i class="fa-solid fa-circle-check mr-1.5 text-sm"></i>
+                                已授权
+                            </div>
+                            <span class="text-[#909399]">最后一次更新时间：2021年07月12日 12:00:00</span>
                         </div>
                     </div>
 
-                    <!-- 表格 -->
-                    <div class="overflow-x-auto flex-1">
-                        <table class="w-full text-left text-[13px] text-[#606266]">
-                            <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
-                                <tr>
-                                    <th class="py-3 px-4 w-16">序号</th>
-                                    <th class="py-3 px-4">模型名称</th>
-                                    <th class="py-3 px-4">场景名称</th>
-                                    <th class="py-3 px-4">场景编号</th>
-                                    <th class="py-3 px-4">更新时间 <i class="fa-solid fa-sort text-gray-300 ml-1"></i></th>
-                                    <th class="py-3 px-4 w-24">操作</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">1</td>
-                                    <td class="py-4 px-4">公积金数据模型111_0806</td>
-                                    <td class="py-4 px-4">公积金数据场景</td>
-                                    <td class="py-4 px-4">CJ20250806001</td>
-                                    <td class="py-4 px-4">2026-03-04 09:18:34</td>
-                                    <td class="py-4 px-4 text-[#1c7ffd]">
-                                        <a href="#" class="hover:underline">查看</a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">2</td>
-                                    <td class="py-4 px-4">蚂蚁密算0130_测试能力封装...</td>
-                                    <td class="py-4 px-4">测试隐私计算套餐场景001_20...</td>
-                                    <td class="py-4 px-4">CJ20260130001</td>
-                                    <td class="py-4 px-4">2026-03-04 09:10:28</td>
-                                    <td class="py-4 px-4 text-[#1c7ffd]">
-                                        <a href="#" class="hover:underline">查看</a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">3</td>
-                                    <td class="py-4 px-4">隐私计算结果封装模型_009</td>
-                                    <td class="py-4 px-4">隐私计算套餐场景009_20260...</td>
-                                    <td class="py-4 px-4">CJ20260126009</td>
-                                    <td class="py-4 px-4">2026-01-26 13:36:13</td>
-                                    <td class="py-4 px-4 text-[#1c7ffd]">
-                                        <a href="#" class="hover:underline">查看</a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">4</td>
-                                    <td class="py-4 px-4">隐私计算结果封装模型_006</td>
-                                    <td class="py-4 px-4">隐私计算套餐场景005_20260...</td>
-                                    <td class="py-4 px-4">CJ20260126006</td>
-                                    <td class="py-4 px-4">2026-01-26 13:34:32</td>
-                                    <td class="py-4 px-4 text-[#1c7ffd]">
-                                        <a href="#" class="hover:underline">查看</a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">5</td>
-                                    <td class="py-4 px-4">隐私计算结果封装模型_005</td>
-                                    <td class="py-4 px-4">隐私计算套餐场景005_20260...</td>
-                                    <td class="py-4 px-4">CJ20260126005</td>
-                                    <td class="py-4 px-4">2026-01-26 13:34:27</td>
-                                    <td class="py-4 px-4 text-[#1c7ffd]">
-                                        <a href="#" class="hover:underline">查看</a>
-                                    </td>
-                                </tr>
-                                <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                    <td class="py-4 px-4">6</td>
-                                    <td class="py-4 px-4">测试星环接口封装_20260123...</td>
-                                    <td class="py-4 px-4">测试场景_20260123_001</td>
-                                    <td class="py-4 px-4">CJ20260123001</td>
-                                    <td class="py-4 px-4">2026-01-25 11:39:07</td>
-                                    <td class="py-4 px-4 text-[#1c7ffd]">
-                                        <a href="#" class="hover:underline">查看</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- 分页 -->
-                    <div class="flex justify-end items-center mt-4 text-[#606266] text-sm">
-                        <span class="mr-4">共 5 条</span>
-                        <div class="flex items-center gap-1">
-                            <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded text-gray-400 bg-gray-50 cursor-not-allowed">
-                                <i class="fa-solid fa-angle-left"></i>
-                            </button>
-                            <button class="w-7 h-7 flex items-center justify-center border border-[#1c7ffd] rounded text-[#1c7ffd] bg-blue-50">1</button>
-                            <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded text-gray-400 bg-gray-50 cursor-not-allowed">
-                                <i class="fa-solid fa-angle-right"></i>
-                            </button>
+                    <!-- 资源统计小模块（红框位置） -->
+                    <div class="grid grid-cols-3 gap-5">
+                        <!-- 套餐资源卡片 -->
+                        <div class="bg-white rounded-lg p-5 flex flex-col shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] border border-gray-100 hover:-translate-y-0.5 transition-transform duration-300">
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-lg bg-blue-50 text-[#1c7ffd] flex items-center justify-center text-sm">
+                                        <i class="fa-solid fa-layer-group"></i>
+                                    </div>
+                                    <span class="text-[#303133] font-medium text-[15px]">套餐资源开通情况</span>
+                                </div>
+                                <span class="text-xs text-gray-400">总计 4</span>
+                            </div>
+                            <div class="flex justify-between items-end mt-auto">
+                                <div class="flex flex-col">
+                                    <span class="text-[#909399] text-xs mb-1">已开通</span>
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-2xl font-bold text-[#303133] leading-none">3</span>
+                                        <span class="text-xs text-[#909399]">个</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span class="text-[#909399] text-xs mb-1">开通失败</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                                        <span class="text-[#f56c6c] font-medium">1</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="relative ml-4 w-[90px]">
-                            <select class="w-full border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:border-[#1c7ffd] appearance-none bg-white cursor-pointer hover:border-gray-400 transition-colors">
-                                <option>10 条/页</option>
-                            </select>
-                            <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-gray-400 pointer-events-none"></i>
+
+                        <!-- 数据资源卡片 -->
+                        <div class="bg-white rounded-lg p-5 flex flex-col shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] border border-gray-100 hover:-translate-y-0.5 transition-transform duration-300">
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-500 flex items-center justify-center text-sm">
+                                        <i class="fa-solid fa-database"></i>
+                                    </div>
+                                    <span class="text-[#303133] font-medium text-[15px]">数据资源开通情况</span>
+                                </div>
+                                <span class="text-xs text-gray-400">总计 7</span>
+                            </div>
+                            <div class="flex justify-between items-end mt-auto">
+                                <div class="flex flex-col">
+                                    <span class="text-[#909399] text-xs mb-1">已开通</span>
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-2xl font-bold text-[#303133] leading-none">5</span>
+                                        <span class="text-xs text-[#909399]">个</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span class="text-[#909399] text-xs mb-1">开通失败</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                                        <span class="text-[#f56c6c] font-medium">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 开发者账号卡片 -->
+                        <div class="bg-white rounded-lg p-5 flex flex-col shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] border border-gray-100 hover:-translate-y-0.5 transition-transform duration-300">
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-500 flex items-center justify-center text-sm">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                    <span class="text-[#303133] font-medium text-[15px]">开发者账号情况</span>
+                                </div>
+                                <span class="text-xs text-gray-400">总计 1</span>
+                            </div>
+                            <div class="flex justify-between items-end mt-auto">
+                                <div class="flex flex-col">
+                                    <span class="text-[#909399] text-xs mb-1">已开通</span>
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="text-2xl font-bold text-[#303133] leading-none">1</span>
+                                        <span class="text-xs text-[#909399]">个</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span class="text-[#909399] text-xs mb-1">开通失败</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+                                        <span class="text-[#909399] font-medium">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 基本信息卡片 -->
+                    <div class="bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-7 flex-1">
+                        <h2 class="text-[16px] font-bold text-[#303133] mb-8">基本信息</h2>
+                        
+                        <div class="grid grid-cols-2 gap-y-6 gap-x-12 text-[14px]">
+                            <div class="flex">
+                                <span class="text-[#909399] w-[100px] shrink-0">任务名称：</span>
+                                <span class="text-[#303133]">单位公积金开户</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-[#909399] w-[100px] shrink-0">任务编号：</span>
+                                <span class="text-[#303133]">CJ20250714001</span>
+                            </div>
+                            
+                            <div class="flex">
+                                <span class="text-[#909399] w-[100px] shrink-0">版本：</span>
+                                <span class="text-[#303133]">2</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-[#909399] w-[100px] shrink-0">资源数量：</span>
+                                <span class="text-[#303133]">3</span>
+                            </div>
+                            
+                            <div class="flex">
+                                <span class="text-[#909399] w-[100px] shrink-0">开发人数：</span>
+                                <span class="text-[#303133]">2</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-[#909399] w-[100px] shrink-0">单位名称：</span>
+                                <span class="text-[#303133]">山东汇云信息技术有限公司</span>
+                            </div>
+                            
+                            <div class="flex">
+                                <span class="text-[#909399] w-[100px] shrink-0">申请人：</span>
+                                <span class="text-[#303133]">张三</span>
+                            </div>
+                            <div class="flex">
+                                <span class="text-[#909399] w-[100px] shrink-0">电话：</span>
+                                <span class="text-[#303133]">10000000001</span>
+                            </div>
+                            <div class="flex col-span-2 mt-2">
+                                <span class="text-[#909399] w-[100px] shrink-0">任务描述：</span>
+                                <span class="text-[#303133] leading-relaxed">单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户单位公积金开户</span>
+                            </div>
                         </div>
                     </div>
                 </div>
