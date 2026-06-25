@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>协作开发平台 - 套餐资源</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 自定义滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col overflow-hidden bg-[#f0f2f5] text-[14px] text-gray-700">
+    <!-- 顶部导航栏 -->
+    <header class="h-14 bg-[#1c7ffd] flex justify-between items-center px-6 text-white shrink-0 shadow-sm z-10">
+        <div class="flex items-center gap-2">
+            <i class="fa-brands fa-space-awesome text-2xl"></i>
+            <span class="text-lg font-medium tracking-wider ml-1">协作开发平台</span>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="relative cursor-pointer hover:text-gray-200 transition-colors" onclick="window.location.href='my_messages.html'">
+                <i class="fa-regular fa-bell text-xl"></i>
+                <span class="absolute -top-1.5 -right-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-[#1c7ffd] leading-none">20</span>
+            </div>
+            <div class="flex items-center gap-2 cursor-pointer hover:text-gray-200 transition-colors">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=yiyun&backgroundColor=b6e3f4" alt="avatar" class="w-8 h-8 rounded-full border border-blue-300 bg-white">
+                <span>yiyun</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体内容 -->
+    <div class="flex-1 flex overflow-hidden">
+                <!-- 左侧主菜单 -->
+        <aside class="w-[200px] bg-white border-r border-gray-200 flex flex-col py-4 shrink-0 overflow-y-auto">
+            <nav class="flex flex-col text-[#606266]" id="main-nav">
+                <a href="workbench.html" class="flex items-center px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="workbench.html">
+                    <i class="fa-solid fa-border-all w-6 text-center text-lg"></i>
+                    <span class="ml-2">开发工作台</span>
+                </a>
+                <a href="scene_center.html" class="flex items-center px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="scene_center.html,index.html,package_resources.html,data_resources.html">
+                    <i class="fa-regular fa-folder-open w-6 text-center text-lg"></i>
+                    <span class="ml-2">任务中心</span>
+                </a>
+                
+                <!-- 开发成果准备 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-code-branch w-6 text-center text-lg"></i>
+                            <span class="ml-2">开发成果准备</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="image_upload.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="image_upload.html">镜像上传</a>
+                        <a href="api_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="api_list.html">API列表</a>
+                        <a href="dataset_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="dataset_list.html">数据集列表</a>
+                    </div>
+                </div>
+
+                <!-- 部署封装 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-box w-6 text-center text-lg"></i>
+                            <span class="ml-2">部署封装</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="model_deploy_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="model_deploy_list.html,model_deploy_add.html,model_deploy_add_step2.html,model_deploy_add_step3.html">模型部署申请</a>
+                        <a href="capability_pack_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="capability_pack_list.html,capability_pack_add.html">能力封装申请</a>
+                    </div>
+                </div>
+
+                <!-- 模型管理 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-cubes w-6 text-center text-lg"></i>
+                            <span class="ml-2">模型管理</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="deployed_model_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="deployed_model_list.html">已部署模型管理</a>
+                        <a href="model_change_record.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="model_change_record.html">模型变更记录</a>
+                        <a href="offline_model_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="offline_model_list.html">已下线模型</a>
+                    </div>
+                </div>
+
+                <a href="capability_management.html" class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="capability_management.html">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-layer-group w-6 text-center text-lg"></i>
+                        <span class="ml-2">能力管理</span>
+                    </div>
+                </a>
+
+                <!-- 产品发布 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-clipboard-check w-6 text-center text-lg"></i>
+                            <span class="ml-2">产品发布</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="product_release.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="product_release.html,product_release_add.html">产品发布</a>
+                        <a href="published_product_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="published_product_list.html">已发布产品管理</a>
+                        <a href="offline_product_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="offline_product_list.html">已下线产品</a>
+                    </div>
+                </div>
+
+                                <!-- 资源中心 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-server w-6 text-center text-lg"></i>
+                            <span class="ml-2">资源中心</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="my_front_db.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="my_front_db.html">我的前置库</a>
+                        <a href="#" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item">资源需求管理</a>
+                        <a href="#" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item">数据异议管理</a>
+                    </div>
+                </div>
+
+                <a href="help_center.html" class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="help_center.html">
+                    <div class="flex items-center">
+                        <i class="fa-regular fa-circle-question w-6 text-center text-lg"></i>
+                        <span class="ml-2">帮助中心</span>
+                    </div>
+                </a>
+                
+                <!-- 消息中心 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-bullhorn w-6 text-center text-lg"></i>
+                            <span class="ml-2">消息中心</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="my_messages.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="my_messages.html">我的消息</a>
+                        <a href="alert_messages.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="alert_messages.html">告警消息</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <script>
+            // 侧边栏菜单交互逻辑
+            function toggleNavGroup(element) {
+                const content = element.nextElementSibling;
+                const icon = element.querySelector('.group-icon');
+                
+                // Toggle current group
+                content.classList.toggle('hidden');
+                content.classList.toggle('flex');
+                icon.classList.toggle('-rotate-90');
+                
+                // Toggle active style for header
+                if(!content.classList.contains('hidden')) {
+                    element.classList.add('text-[#1c7ffd]');
+                    element.querySelector('.ml-2').classList.add('font-medium');
+                } else {
+                    // Check if any child is active, if so keep header highlighted
+                    const hasActiveChild = content.querySelector('.bg-blue-50');
+                    if (!hasActiveChild) {
+                        element.classList.remove('text-[#1c7ffd]');
+                        element.querySelector('.ml-2').classList.remove('font-medium');
+                    }
+                }
+            }
+
+            // 初始化菜单高亮
+            document.addEventListener('DOMContentLoaded', () => {
+                const currentPath = window.location.pathname.split('/').pop() || 'workbench.html';
+                const navItems = document.querySelectorAll('.nav-item');
+                
+                navItems.forEach(item => {
+                    const hrefs = item.getAttribute('data-href').split(',');
+                    if (hrefs.includes(currentPath)) {
+                        // 如果是顶级菜单
+                        if (item.parentElement.id === 'main-nav') {
+                            item.classList.add('bg-blue-50', 'text-[#1c7ffd]', 'font-medium', 'border-r-2', 'border-[#1c7ffd]');
+                            item.classList.remove('text-[#606266]');
+                        } else {
+                            // 如果是子菜单
+                            item.classList.add('bg-blue-50', 'text-[#1c7ffd]', 'font-medium');
+                            
+                            // 展开父级菜单
+                            const groupContent = item.closest('.group-content');
+                            const groupHeader = groupContent.previousElementSibling;
+                            const groupIcon = groupHeader.querySelector('.group-icon');
+                            
+                            groupContent.classList.remove('hidden');
+                            groupContent.classList.add('flex');
+                            groupIcon.classList.add('-rotate-90');
+                            
+                            groupHeader.classList.add('text-[#1c7ffd]');
+                            groupHeader.querySelector('.ml-2').classList.add('font-medium');
+                        }
+                    }
+                });
+            });
+        </script>
+
+        <!-- 右侧内容区 -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <!-- 面包屑 / 页面标题 -->
+            <div class="h-[52px] flex items-center px-6 text-[#606266] shrink-0 bg-transparent">
+                <i class="fa-solid fa-house mr-2 text-gray-400 text-sm"></i>
+                <span>任务主页</span>
+            </div>
+
+            <!-- 核心内容容器 -->
+            <div class="flex-1 px-6 pb-6 flex gap-5 overflow-hidden">
+                
+                <!-- 二级菜单卡片 -->
+                <div class="w-[200px] bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-2.5 flex flex-col gap-1 shrink-0 h-fit">
+                    <a href="index.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
+                        <i class="fa-solid fa-table-cells-large w-6 text-center mr-2 text-lg"></i>
+                        任务详情
+                    </a>
+                    <a href="package_resources.html" class="flex items-center px-4 py-3 bg-blue-50 text-[#1c7ffd] rounded-md font-medium transition-colors">
+                        <i class="fa-solid fa-cube w-6 text-center mr-2 text-lg"></i>
+                        套餐资源
+                    </a>
+                    <a href="data_resources.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
+                        <i class="fa-solid fa-chart-line w-6 text-center mr-2 text-lg"></i>
+                        数据资源
+                    </a>
+                    <a href="dev_team.html" class="flex items-center px-4 py-3 text-[#606266] hover:bg-gray-50 hover:text-[#1c7ffd] rounded-md transition-colors">
+                        <i class="fa-solid fa-users w-6 text-center mr-2 text-lg"></i>
+                        开发团队
+                    </a>
+                </div>
+
+                <!-- 详情内容卡片 -->
+                <div class="flex-1 flex flex-col gap-5 overflow-y-auto pr-1">
+                    
+                    <!-- 头部信息卡片 -->
+                    <div class="bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-6 shrink-0">
+                        <div class="flex items-center mb-5">
+                            <h2 class="text-[16px] font-bold text-[#303133]">套餐资源</h2>
+                            <div class="ml-4 text-[12px] text-[#e6a23c] flex items-center bg-[#fdf6ec] border border-[#faecd8] px-3 py-1.5 rounded">
+                                <i class="fa-solid fa-circle-info mr-1.5"></i>
+                                如本任务暂无后续产品开发任务，建议及时回收测试资源，避免资源无效占用与浪费。
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center text-[14px]">
+                                <div class="flex items-center text-[#1c7ffd] w-[220px]">
+                                    <i class="fa-solid fa-globe w-6 text-center mr-1 opacity-80"></i>
+                                    <span class="text-[#606266]">在线沙箱测试空间资源</span>
+                                </div>
+                                <div class="flex items-center w-[120px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
+                                    <span class="text-[#303133]">开通中</span>
+                                </div>
+                                <div class="text-[#909399] w-[260px]">
+                                    更新时间：2026-05-15 00:00:00
+                                </div>
+                                <div class="flex-1 flex justify-end pr-4">
+                                    <span class="text-gray-300 cursor-not-allowed">重新开通</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-[14px]">
+                                <div class="flex items-center text-[#1c7ffd] w-[220px]">
+                                    <i class="fa-solid fa-globe w-6 text-center mr-1 opacity-80"></i>
+                                    <span class="text-[#606266]">在线沙箱测试空间资源</span>
+                                </div>
+                                <div class="flex items-center w-[120px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-green-500 mr-2"></span>
+                                    <span class="text-[#303133]">已开通</span>
+                                </div>
+                                <div class="text-[#909399] w-[260px]">
+                                    开通时间：2026-05-15 00:00:00
+                                </div>
+                                <div class="flex-1 flex justify-end pr-4">
+                                    <a href="#" onclick="openRecycleModal(this); return false;" class="text-[#1c7ffd] hover:text-blue-500 cursor-pointer">回收</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-[14px]">
+                                <div class="flex items-center text-[#1c7ffd] w-[220px]">
+                                    <i class="fa-solid fa-globe w-6 text-center mr-1 opacity-80"></i>
+                                    <span class="text-[#606266]">在线沙箱测试空间资源</span>
+                                </div>
+                                <div class="flex items-center w-[120px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gray-400 mr-2"></span>
+                                    <span class="text-[#303133]">已回收</span>
+                                </div>
+                                <div class="text-[#909399] w-[260px]">
+                                    回收时间：2026-05-15 00:00:00
+                                </div>
+                                <div class="flex-1 flex justify-end pr-4">
+                                    <a href="#" onclick="openReopenModal(this); return false;" class="text-[#1c7ffd] hover:text-blue-500 cursor-pointer">重新开通</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center text-[14px]">
+                                <div class="flex items-center text-[#1c7ffd] w-[220px]">
+                                    <i class="fa-solid fa-globe w-6 text-center mr-1 opacity-80"></i>
+                                    <span class="text-[#606266]">在线沙箱测试空间资源</span>
+                                </div>
+                                <div class="flex items-center w-[120px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 mr-2"></span>
+                                    <span class="text-[#303133]">开通失败</span>
+                                </div>
+                                <div class="text-[#909399] w-[260px]">
+                                    更新时间：2026-05-15 00:00:00
+                                </div>
+                                <div class="flex-1 flex justify-end pr-4">
+                                    <a href="#" onclick="openReopenModal(this); return false;" class="text-[#1c7ffd] hover:text-blue-500 cursor-pointer">重新开通</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center text-[14px]">
+                                <div class="flex items-center text-[#1c7ffd] w-[220px]">
+                                    <i class="fa-solid fa-globe w-6 text-center mr-1 opacity-80"></i>
+                                    <span class="text-[#606266]">在线沙箱正式空间资源</span>
+                                </div>
+                                <div class="flex items-center w-[120px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-green-500 mr-2"></span>
+                                    <span class="text-[#303133]">已开通</span>
+                                </div>
+                                <div class="text-[#909399] w-[260px]">
+                                    开通时间：2026-05-15 00:00:00
+                                </div>
+                                <div class="flex-1 flex justify-end pr-4">
+                                    <a href="#" onclick="openRecycleModal(this); return false;" class="text-[#1c7ffd] hover:text-blue-500 cursor-pointer">回收</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center text-[14px]">
+                                <div class="flex items-center text-[#1c7ffd] w-[220px]">
+                                    <i class="fa-solid fa-globe w-6 text-center mr-1 opacity-80"></i>
+                                    <span class="text-[#606266]">隐私计算正式空间资源</span>
+                                </div>
+                                <div class="flex items-center w-[120px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-green-500 mr-2"></span>
+                                    <span class="text-[#303133]">已开通</span>
+                                </div>
+                                <div class="text-[#909399] w-[260px]">
+                                    开通时间：2026-05-15 00:00:00
+                                </div>
+                                <div class="flex-1 flex justify-end pr-4">
+                                    <a href="#" class="text-[#1c7ffd] hover:text-blue-500 cursor-pointer">回收</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center text-[14px]">
+                                <div class="flex items-center text-[#1c7ffd] w-[220px]">
+                                    <i class="fa-solid fa-globe w-6 text-center mr-1 opacity-80"></i>
+                                    <span class="text-[#606266]">离线沙箱正式空间资源</span>
+                                </div>
+                                <div class="flex items-center w-[120px]">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-green-500 mr-2"></span>
+                                    <span class="text-[#303133]">已开通</span>
+                                </div>
+                                <div class="text-[#909399] w-[260px]">
+                                    开通时间：2026-05-15 00:00:00
+                                </div>
+                                <div class="flex-1 flex justify-end pr-4">
+                                    <a href="#" onclick="openRecycleModal(this); return false;" class="text-[#1c7ffd] hover:text-blue-500 cursor-pointer">回收</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 资源列表卡片 -->
+                    <div class="bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex-1 flex flex-col overflow-hidden">
+                        <!-- Tabs -->
+                        <div class="flex border-b border-gray-100 px-6 shrink-0 pt-2">
+                            <div class="py-3 px-2 text-[#1c7ffd] border-b-2 border-[#1c7ffd] font-medium mr-6 cursor-pointer">
+                                在线沙箱
+                            </div>
+                            <div class="py-3 px-2 text-[#606266] hover:text-[#1c7ffd] mr-6 cursor-pointer transition-colors">
+                                离线沙箱
+                            </div>
+                            <div class="py-3 px-2 text-[#606266] hover:text-[#1c7ffd] cursor-pointer transition-colors">
+                                隐私计算
+                            </div>
+                        </div>
+                        
+                        <!-- Tab Content -->
+                        <div class="p-6 overflow-y-auto flex-1">
+                            <!-- Section 1 -->
+                            <div class="mb-10">
+                                <div class="flex justify-between items-center mb-3">
+                                    <div class="flex items-center">
+                                        <span class="text-[15px] font-bold text-[#303133] mr-3">套餐A1</span>
+                                        <span class="bg-blue-50 text-[#1c7ffd] border border-blue-200 text-[12px] px-2 py-0.5 rounded-sm">工具</span>
+                                    </div>
+                                    <button class="bg-[#1c7ffd] hover:bg-blue-500 text-white px-5 py-1.5 rounded text-[14px] transition-colors shadow-sm">
+                                        在线开发
+                                    </button>
+                                </div>
+                                <p class="text-[13px] text-[#606266] mb-5">套餐介绍：本套餐适合***开发任务本套餐适合***开发任务本套餐适合</p>
+                                
+                                <div class="rounded border border-gray-100 overflow-hidden">
+                                    <table class="w-full text-[14px] text-center border-collapse">
+                                        <thead>
+                                            <tr class="bg-gray-50 text-[#606266]">
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100 w-[80px]">序号</th>
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100">规格名称</th>
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100">申请规格标准</th>
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100">使用规格标准（测试空间）</th>
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100">使用规格标准（正式空间）</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-[#303133]">
+                                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors">
+                                                <td class="py-3.5 px-4">1</td>
+                                                <td class="py-3.5 px-4">数据开发</td>
+                                                <td class="py-3.5 px-4">10个任务</td>
+                                                <td class="py-3.5 px-4">5个任务</td>
+                                                <td class="py-3.5 px-4">5个任务</td>
+                                            </tr>
+                                            <tr class="border-b border-gray-50 hover:bg-gray-50 transition-colors">
+                                                <td class="py-3.5 px-4">2</td>
+                                                <td class="py-3.5 px-4">API 开发</td>
+                                                <td class="py-3.5 px-4">10个API</td>
+                                                <td class="py-3.5 px-4">5个API</td>
+                                                <td class="py-3.5 px-4">5个API</td>
+                                            </tr>
+                                            <tr class="hover:bg-gray-50 transition-colors">
+                                                <td class="py-3.5 px-4">3</td>
+                                                <td class="py-3.5 px-4">API 开发</td>
+                                                <td class="py-3.5 px-4">10个工程</td>
+                                                <td class="py-3.5 px-4">5个工程</td>
+                                                <td class="py-3.5 px-4">5个工程</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Section 2 -->
+                            <div>
+                                <div class="flex items-center mb-3">
+                                    <span class="text-[15px] font-bold text-[#303133] mr-3">套餐A2</span>
+                                    <span class="bg-teal-50 text-teal-500 border border-teal-200 text-[12px] px-2 py-0.5 rounded-sm">存算</span>
+                                </div>
+                                <p class="text-[13px] text-[#606266] mb-5">套餐介绍：本套餐适合***开发任务本套餐适合</p>
+                                
+                                <div class="rounded border border-gray-100 overflow-hidden">
+                                    <table class="w-full text-[14px] text-center border-collapse">
+                                        <thead>
+                                            <tr class="bg-gray-50 text-[#606266]">
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100 w-[80px]">序号</th>
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100">规格名称</th>
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100">申请规格标准</th>
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100">使用规格标准（测试空间）</th>
+                                                <th class="py-3.5 px-4 font-normal border-b border-gray-100">使用规格标准（正式空间）</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-[#303133]">
+                                            <!-- Placeholder for future rows -->
+                                            <tr>
+                                                <td colspan="5" class="py-8 text-gray-400 text-sm">暂无数据</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 回收确认弹窗 -->
+    <div id="recycleModal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg w-[400px] overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+                <h3 class="text-lg font-medium text-gray-900">提示</h3>
+                <button onclick="closeModal('recycleModal')" class="text-gray-400 hover:text-gray-500">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="px-6 py-8 flex items-center">
+                <i class="fa-solid fa-circle-exclamation text-orange-400 text-2xl mr-3"></i>
+                <span class="text-gray-700 text-base">是否要回收本资源？</span>
+            </div>
+            <div class="px-6 py-4 bg-gray-50 flex justify-end gap-3 border-t border-gray-100">
+                <button onclick="closeModal('recycleModal')" class="px-4 py-2 bg-white border border-gray-300 rounded text-gray-700 hover:bg-gray-50 transition-colors">取消</button>
+                <button onclick="confirmRecycle()" class="px-4 py-2 bg-[#1c7ffd] text-white rounded hover:bg-blue-500 transition-colors">确认</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 重新开通弹窗 -->
+    <div id="reopenModal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg w-[400px] overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+                <h3 class="text-lg font-medium text-gray-900">提示</h3>
+                <button onclick="closeModal('reopenModal')" class="text-gray-400 hover:text-gray-500">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="px-6 py-8 flex items-center">
+                <i class="fa-solid fa-circle-question text-blue-400 text-2xl mr-3"></i>
+                <span class="text-gray-700 text-base">是否要重新开通本资源？</span>
+            </div>
+            <div class="px-6 py-4 bg-gray-50 flex justify-end gap-3 border-t border-gray-100">
+                <button onclick="closeModal('reopenModal')" class="px-4 py-2 bg-white border border-gray-300 rounded text-gray-700 hover:bg-gray-50 transition-colors">取消</button>
+                <button onclick="confirmReopen()" class="px-4 py-2 bg-[#1c7ffd] text-white rounded hover:bg-blue-500 transition-colors">确认</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示消息 Toast -->
+    <div id="toastMessage" class="fixed top-5 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded shadow-md border-l-4 border-green-500 flex items-center gap-2 transition-opacity duration-300 opacity-0 pointer-events-none z-50">
+        <i class="fa-solid fa-circle-check text-green-500"></i>
+        <span id="toastText" class="text-gray-700">操作成功</span>
+    </div>
+
+    <script>
+        let currentTarget = null;
+
+        function openRecycleModal(element) {
+            currentTarget = element;
+            document.getElementById('recycleModal').classList.remove('hidden');
+        }
+
+        function openReopenModal(element) {
+            currentTarget = element;
+            document.getElementById('reopenModal').classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            currentTarget = null;
+        }
+
+        function showToast(message, colorClass = 'border-green-500', iconClass = 'fa-circle-check', iconColor = 'text-green-500') {
+            const toast = document.getElementById('toastMessage');
+            const toastText = document.getElementById('toastText');
+            const toastIcon = toast.querySelector('i');
+            
+            toastText.textContent = message;
+            toast.className = `fixed top-5 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded shadow-md border-l-4 ${colorClass} flex items-center gap-2 transition-opacity duration-300 opacity-0 pointer-events-none z-50`;
+            toastIcon.className = `fa-solid ${iconClass} ${iconColor}`;
+            
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+            
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+            }, 3000);
+        }
+
+        function confirmRecycle() {
+            closeModal('recycleModal');
+            
+            if(currentTarget) {
+                const row = currentTarget.closest('.flex.items-center.text-\\[14px\\]');
+                if(row) {
+                    const statusDot = row.querySelector('.rounded-full');
+                    if(statusDot) {
+                        statusDot.className = 'w-1.5 h-1.5 rounded-full bg-gray-400 mr-2';
+                    }
+                    const statusText = row.querySelector('.text-\\[\\#303133\\]');
+                    if(statusText) {
+                        statusText.textContent = '已回收';
+                    }
+                    
+                    const timeContainer = row.querySelector('.text-\\[\\#909399\\].w-\\[260px\\]');
+                    if(timeContainer) {
+                        const now = new Date();
+                        const formattedDate = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}:${String(now.getSeconds()).padStart(2,'0')}`;
+                        timeContainer.textContent = `回收时间：${formattedDate}`;
+                    }
+                    
+                    const actionContainer = row.querySelector('.flex-1.flex.justify-end.pr-4');
+                    if(actionContainer) {
+                        actionContainer.innerHTML = '<a href="#" onclick="openReopenModal(this); return false;" class="text-[#1c7ffd] hover:text-blue-500 cursor-pointer">重新开通</a>';
+                    }
+                }
+            }
+            
+            showToast('回收成功');
+        }
+
+        function confirmReopen() {
+            closeModal('reopenModal');
+            
+            if(currentTarget) {
+                const row = currentTarget.closest('.flex.items-center.text-\\[14px\\]');
+                if(row) {
+                    const statusDot = row.querySelector('.rounded-full');
+                    if(statusDot) {
+                        statusDot.className = 'w-1.5 h-1.5 rounded-full bg-blue-500 mr-2';
+                    }
+                    const statusText = row.querySelector('.text-\\[\\#303133\\]');
+                    if(statusText) {
+                        statusText.textContent = '开通中';
+                    }
+                    
+                    const timeContainer = row.querySelector('.text-\\[\\#909399\\].w-\\[260px\\]');
+                    if(timeContainer) {
+                        timeContainer.textContent = '-';
+                    }
+                    
+                    const actionContainer = row.querySelector('.flex-1.flex.justify-end.pr-4');
+                    if(actionContainer) {
+                        actionContainer.innerHTML = '<span class="text-gray-300 cursor-not-allowed">重新开通</span>';
+                    }
+                }
+            }
+            
+            showToast('申请提交成功');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>协作开发平台 - 我的前置库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col overflow-hidden bg-[#f0f2f5] text-[14px] text-gray-700">
+    <!-- 顶部导航栏 -->
+    <header class="h-14 bg-[#1c7ffd] flex justify-between items-center px-6 text-white shrink-0 shadow-sm z-10">
+        <div class="flex items-center gap-2">
+            <i class="fa-brands fa-space-awesome text-2xl"></i>
+            <span class="text-lg font-medium tracking-wider ml-1">协作开发平台</span>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="relative cursor-pointer hover:text-gray-200 transition-colors" onclick="window.location.href='my_messages.html'">
+                <i class="fa-regular fa-bell text-xl"></i>
+                <span class="absolute -top-1.5 -right-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-[#1c7ffd] leading-none">20</span>
+            </div>
+            <div class="flex items-center gap-2 cursor-pointer hover:text-gray-200 transition-colors">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=yiyun&backgroundColor=b6e3f4" alt="avatar" class="w-8 h-8 rounded-full border border-blue-300 bg-white">
+                <span>yiyun</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体内容 -->
+    <div class="flex-1 flex overflow-hidden">
+        <!-- 左侧主菜单 -->
+        <aside class="w-[200px] bg-white border-r border-gray-200 flex flex-col py-4 shrink-0 overflow-y-auto">
+            <nav class="flex flex-col text-[#606266]" id="main-nav">
+                <a href="workbench.html" class="flex items-center px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="workbench.html">
+                    <i class="fa-solid fa-border-all w-6 text-center text-lg"></i>
+                    <span class="ml-2">开发工作台</span>
+                </a>
+                <a href="scene_center.html" class="flex items-center px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="scene_center.html,index.html,package_resources.html,data_resources.html">
+                    <i class="fa-regular fa-folder-open w-6 text-center text-lg"></i>
+                    <span class="ml-2">任务中心</span>
+                </a>
+                
+                <!-- 开发成果准备 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-code-branch w-6 text-center text-lg"></i>
+                            <span class="ml-2">开发成果准备</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="image_upload.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="image_upload.html">镜像上传</a>
+                        <a href="api_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="api_list.html">API列表</a>
+                        <a href="dataset_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="dataset_list.html">数据集列表</a>
+                    </div>
+                </div>
+
+                <!-- 部署封装 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-box w-6 text-center text-lg"></i>
+                            <span class="ml-2">部署封装</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="model_deploy_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="model_deploy_list.html,model_deploy_add.html,model_deploy_add_step2.html,model_deploy_add_step3.html">模型部署申请</a>
+                        <a href="capability_pack_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="capability_pack_list.html,capability_pack_add.html">能力封装申请</a>
+                    </div>
+                </div>
+
+                <!-- 模型管理 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-cubes w-6 text-center text-lg"></i>
+                            <span class="ml-2">模型管理</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="deployed_model_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="deployed_model_list.html">已部署模型管理</a>
+                        <a href="model_change_record.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="model_change_record.html">模型变更记录</a>
+                        <a href="offline_model_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="offline_model_list.html">已下线模型</a>
+                    </div>
+                </div>
+
+                <a href="capability_management.html" class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="capability_management.html">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-layer-group w-6 text-center text-lg"></i>
+                        <span class="ml-2">能力管理</span>
+                    </div>
+                </a>
+
+                <!-- 产品发布 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-clipboard-check w-6 text-center text-lg"></i>
+                            <span class="ml-2">产品发布</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="product_release.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="product_release.html,product_release_add.html">产品发布</a>
+                        <a href="published_product_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="published_product_list.html">已发布产品管理</a>
+                        <a href="offline_product_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="offline_product_list.html">已下线产品</a>
+                    </div>
+                </div>
+
+                <!-- 资源中心 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-server w-6 text-center text-lg"></i>
+                            <span class="ml-2">资源中心</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="my_front_db.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="my_front_db.html">我的前置库</a>
+                    </div>
+                </div>
+
+                <a href="help_center.html" class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="help_center.html">
+                    <div class="flex items-center">
+                        <i class="fa-regular fa-circle-question w-6 text-center text-lg"></i>
+                        <span class="ml-2">帮助中心</span>
+                    </div>
+                </a>
+                
+                <!-- 消息中心 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-bullhorn w-6 text-center text-lg"></i>
+                            <span class="ml-2">消息中心</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="my_messages.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="my_messages.html">我的消息</a>
+                        <a href="alert_messages.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="alert_messages.html">告警消息</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <script>
+            // 侧边栏菜单交互逻辑
+            function toggleNavGroup(element) {
+                const content = element.nextElementSibling;
+                const icon = element.querySelector('.group-icon');
+                
+                // Toggle current group
+                content.classList.toggle('hidden');
+                content.classList.toggle('flex');
+                icon.classList.toggle('-rotate-90');
+                
+                // Toggle active style for header
+                if(!content.classList.contains('hidden')) {
+                    element.classList.add('text-[#1c7ffd]');
+                    element.querySelector('.ml-2').classList.add('font-medium');
+                } else {
+                    // Check if any child is active, if so keep header highlighted
+                    const hasActiveChild = content.querySelector('.bg-blue-50');
+                    if (!hasActiveChild) {
+                        element.classList.remove('text-[#1c7ffd]');
+                        element.querySelector('.ml-2').classList.remove('font-medium');
+                    }
+                }
+            }
+
+            // 初始化菜单高亮
+            document.addEventListener('DOMContentLoaded', () => {
+                const currentPath = 'my_front_db.html';
+                const navItems = document.querySelectorAll('.nav-item');
+                
+                navItems.forEach(item => {
+                    const hrefs = item.getAttribute('data-href');
+                    if (hrefs && hrefs.split(',').includes(currentPath)) {
+                        // 如果是顶级菜单
+                        if (item.parentElement.id === 'main-nav') {
+                            item.classList.add('bg-blue-50', 'text-[#1c7ffd]', 'font-medium', 'border-r-2', 'border-[#1c7ffd]');
+                            item.classList.remove('text-[#606266]');
+                        } else {
+                            // 如果是子菜单
+                            item.classList.add('bg-blue-50', 'text-[#1c7ffd]', 'font-medium');
+                            
+                            // 展开父级菜单
+                            const groupContent = item.closest('.group-content');
+                            const groupHeader = groupContent.previousElementSibling;
+                            const groupIcon = groupHeader.querySelector('.group-icon');
+                            
+                            groupContent.classList.remove('hidden');
+                            groupContent.classList.add('flex');
+                            groupIcon.classList.add('-rotate-90');
+                            
+                            groupHeader.classList.add('text-[#1c7ffd]');
+                            groupHeader.querySelector('.ml-2').classList.add('font-medium');
+                        }
+                    }
+                });
+            });
+        </script>
+
+        <!-- 右侧内容区 -->
+        <main class="flex-1 flex flex-col overflow-hidden bg-[#f0f2f5] relative">
+            
+            <!-- 面包屑 -->
+            <div class="h-[52px] flex items-center px-6 text-[#606266] shrink-0 bg-white border-b border-gray-100 text-[14px]">
+                <span>工作台</span>
+                <span class="mx-2">/</span>
+                <span>资源中心</span>
+                <span class="mx-2">/</span>
+                <span class="text-[#303133]">我的前置库</span>
+            </div>
+
+            <!-- 核心内容容器 -->
+            <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-5 relative">
+                
+                <!-- 前置库概览卡片 -->
+                <div class="bg-white rounded-lg p-6 shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] shrink-0">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-8 h-8 rounded-full border border-[#1c7ffd] text-[#1c7ffd] flex items-center justify-center">
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i>
+                                <span class="text-[#3b82f6] font-medium text-[14px]">待分配</span>
+                            </div>
+                            <span class="text-[#909399] text-[13px]">申请时间：2026-04-09 13:27:52</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button onclick="document.getElementById('applyFrontDbModal').classList.remove('hidden')" class="h-8 px-4 bg-gray-100 text-gray-400 rounded text-[13px] cursor-not-allowed">前置库申请</button>
+                            <a href="#" class="text-[#1c7ffd] text-[13px] hover:underline" onclick="openFrontDbDrawer()">查看申请</a>
+                            <a href="#" class="text-[#1c7ffd] text-[13px] hover:underline flex items-center gap-1 ml-4"><i class="fa-regular fa-file-lines"></i> 前置库使用说明</a>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-4 gap-y-6 gap-x-8 mb-6 text-[13px]">
+                        <div class="flex items-center">
+                            <span class="text-[#606266] w-24">前置库名称：</span>
+                            <span class="text-[#303133]">--</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-[#606266] w-24">主机地址：</span>
+                            <span class="text-[#303133]">--</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-[#606266] w-24">端口号：</span>
+                            <span class="text-[#303133]">--</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-[#606266] w-24">数据库名：</span>
+                            <span class="text-[#303133]">--</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-[#606266] w-24">数据库类型：</span>
+                            <span class="text-[#303133]">--</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-[#606266] w-24">用户名：</span>
+                            <span class="text-[#303133]">--</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-[#606266] w-24">密码：</span>
+                            <span class="text-[#303133] flex items-center gap-2">-- <i class="fa-regular fa-eye-slash text-gray-400 cursor-pointer"></i></span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="bg-[#f0f5ff] rounded p-4 flex flex-col justify-between h-20">
+                            <span class="text-[#606266] text-[13px]">前置库总量 (MB)</span>
+                            <span class="text-[#1c7ffd] text-2xl font-bold text-right">1088</span>
+                        </div>
+                        <div class="bg-[#f0f5ff] rounded p-4 flex flex-col justify-between h-20">
+                            <span class="text-[#606266] text-[13px]">前置库已使用 (MB)</span>
+                            <span class="text-[#1c7ffd] text-2xl font-bold text-right">0</span>
+                        </div>
+                        <div class="bg-[#f0f5ff] rounded p-4 flex flex-col justify-between h-20">
+                            <span class="text-[#606266] text-[13px]">前置库剩余 (MB)</span>
+                            <span class="text-[#1c7ffd] text-2xl font-bold text-right">0</span>
+                        </div>
+                        <div class="bg-[#fff7e6] rounded p-4 flex flex-col justify-between h-20">
+                            <span class="text-[#606266] text-[13px]">数据表数量 (个)</span>
+                            <span class="text-[#fa8c16] text-2xl font-bold text-right">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 列表区 -->
+                <div class="bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] flex-1 flex flex-col p-6 min-h-[300px]">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-[15px] font-medium text-[#303133]">社会数据资源列表</h2>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-rotate-right text-gray-400 cursor-pointer hover:text-[#1c7ffd]"></i>
+                            <i class="fa-solid fa-gear text-gray-400 cursor-pointer hover:text-[#1c7ffd]"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-1 flex flex-col">
+                        <table class="w-full text-left text-[13px] text-[#606266]">
+                            <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
+                                <tr>
+                                    <th class="py-3 px-6 w-24">序号</th>
+                                    <th class="py-3 px-6">表名</th>
+                                    <th class="py-3 px-6 text-center">数据量（条）</th>
+                                    <th class="py-3 px-6 text-right">数据更新时间</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        
+                        <div class="flex-1 flex flex-col items-center justify-center text-gray-400 py-10">
+                            <div class="text-4xl mb-2 text-gray-300"><i class="fa-solid fa-box-open"></i></div>
+                            <div class="text-[13px]">暂无数据</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-end items-center mt-4 text-[13px] text-[#606266] gap-2 border-t border-gray-100 pt-4">
+                        <span>共 0 条</span>
+                        <div class="flex items-center gap-1">
+                            <button class="w-8 h-8 flex items-center justify-center border border-gray-200 rounded text-gray-300 cursor-not-allowed"><i class="fa-solid fa-angle-left text-[10px]"></i></button>
+                            <button class="w-8 h-8 flex items-center justify-center border border-gray-200 rounded text-gray-400 cursor-not-allowed">0</button>
+                            <button class="w-8 h-8 flex items-center justify-center border border-gray-200 rounded text-gray-300 cursor-not-allowed"><i class="fa-solid fa-angle-right text-[10px]"></i></button>
+                        </div>
+                        <div class="relative">
+                            <select class="h-8 px-3 border border-gray-200 rounded focus:outline-none focus:border-[#1c7ffd] appearance-none pr-6 bg-white">
+                                <option>10 条/页</option>
+                            </select>
+                            <i class="fa-solid fa-angle-down absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-[10px] pointer-events-none"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center text-xs text-[#1c7ffd] opacity-70 mt-2">
+                    主办单位：云上陕西科技运营有限公司
+                </div>
+
+                <!-- 抽屉遮罩 -->
+                <div id="drawerOverlay" class="fixed inset-0 bg-black bg-opacity-30 z-40 hidden transition-opacity" onclick="closeFrontDbDrawer()"></div>
+                
+                <!-- 查看申请详情抽屉 -->
+                <div id="frontDbDrawer" class="fixed top-0 right-0 h-full w-[800px] bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+                    <div class="h-14 border-b border-gray-100 flex items-center justify-between px-6 shrink-0 bg-white">
+                        <span class="font-medium text-[#303133]">前置库详情</span>
+                        <i class="fa-solid fa-xmark text-gray-400 cursor-pointer hover:text-[#1c7ffd] text-lg" onclick="closeFrontDbDrawer()"></i>
+                    </div>
+                    
+                    <div class="flex-1 overflow-y-auto p-6 bg-[#f5f7fa]">
+                        <div class="bg-white rounded-lg p-6 shadow-sm mb-4">
+                            <div class="flex justify-between items-start">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-blue-50 text-[#1c7ffd] rounded-full flex items-center justify-center text-xl shrink-0">
+                                          <i class="fa-brands fa-rocketchat"></i>
+                                      </div>
+                                    <div>
+                                        <div class="text-[18px] font-bold text-[#303133] mb-1">前置库资源申请</div>
+                                        <div class="text-[#909399] text-[13px]">数据开发方：山东亿云信息技术有限公司</div>
+                                    <div class="pl-4 mt-8">
+                                        <h3 class="font-bold border-l-2 border-[#1c7ffd] pl-2 text-[#303133] text-[15px] mb-6 leading-none -ml-4">资源授权使用策略</h3>
+                                        <div class="flex gap-4">
+                                            <div class="border border-gray-200 rounded-lg p-4 flex-1">
+                                                <div class="font-bold text-[#303133] mb-4">限定使用环境</div>
+                                                <div class="text-[#606266] text-center mb-3">协作开发平台-数据沙箱</div>
+                                                <div class="text-[#606266] text-center">协作开发平台-隐私计算</div>
+                                            </div>
+                                            <div class="border border-gray-200 rounded-lg p-4 flex-1">
+                                                <div class="font-bold text-[#303133] mb-4">限定使用频率</div>
+                                                <div class="text-[#606266] text-center">10次/小时</div>
+                                            </div>
+                                            <div class="border border-gray-200 rounded-lg p-4 flex-1">
+                                                <div class="font-bold text-[#303133] mb-4">限定可使用字段</div>
+                                                <div class="flex justify-center gap-4 text-[#606266]">
+                                                    <span>字段名称1</span>
+                                                    <span>字段名称2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="flex items-center gap-1.5 justify-end mb-1 text-[13px]">
+                                        <i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i>
+                                        <span class="text-[#3b82f6]">待分配</span>
+                                    </div>
+                                    <div class="text-[#909399] text-[13px]">申请时间：2026-04-09 13:27:52</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-4">
+                            <div class="px-6 py-4 border-b border-gray-100">
+                                <h3 class="font-medium text-[#303133] text-[14px]">申请信息</h3>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex flex-col gap-5 text-[13px]">
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">数据库空间大小(MB)：</span>
+                                        <span class="text-[#303133] flex-1">1088</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">申请描述：</span>
+                                        <span class="text-[#303133] flex-1">大萨达ds</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">附件：</span>
+                                        <span class="text-[#303133] flex-1">--</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">数据开发方：</span>
+                                        <span class="text-[#303133] flex-1">山东亿云信息技术有限公司</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">联系人：</span>
+                                        <span class="text-[#303133] flex-1">亿云开发者n+1</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">联系方式：</span>
+                                        <span class="text-[#303133] flex-1">17899996666</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <div class="px-6 py-4 border-b border-gray-100">
+                                <h3 class="font-medium text-[#303133] text-[14px]">分配信息</h3>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex flex-col gap-5 text-[13px]">
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">处理结果：</span>
+                                        <span class="text-[#303133] flex-1">待分配</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">处理意见：</span>
+                                        <span class="text-[#303133] flex-1">dsads</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">处理时间：</span>
+                                        <span class="text-[#303133] flex-1">--</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">处理单位：</span>
+                                        <span class="text-[#303133] flex-1">--</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">前置库名称：</span>
+                                        <span class="text-[#303133] flex-1">--</span>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="text-[#606266] w-36">主机地址：</span>
+                                        <span class="text-[#303133] flex-1">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 前置库申请弹窗 -->
+                <div id="applyFrontDbModal" class="hidden fixed inset-0 bg-black bg-opacity-30 z-[60] flex justify-center items-center">
+                    <div class="bg-white rounded shadow-lg w-[700px] flex flex-col overflow-hidden">
+                        <div class="h-12 flex items-center justify-between px-6 border-b border-gray-100">
+                            <span class="text-[16px] font-medium text-[#303133]">前置库申请</span>
+                            <i class="fa-solid fa-xmark text-gray-400 cursor-pointer hover:text-gray-600" onclick="document.getElementById('applyFrontDbModal').classList.add('hidden')"></i>
+                        </div>
+                        <div class="p-8 flex flex-col gap-6">
+                            <div class="flex items-center">
+                                <label class="w-[140px] text-right pr-4 text-[#606266] leading-tight"><span class="text-red-500 mr-1">*</span>数据库空间大小<br>(MB)：</label>
+                                <input type="text" placeholder="请输入" class="flex-1 h-9 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#1c7ffd]">
+                            </div>
+                            <div class="flex items-start">
+                                <label class="w-[140px] text-right pr-4 text-[#606266] pt-2"><span class="text-red-500 mr-1">*</span>申请描述：</label>
+                                <textarea placeholder="请输入申请原因、期望数量等信息" class="flex-1 h-24 p-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#1c7ffd] resize-none"></textarea>
+                            </div>
+                            <div class="flex items-start">
+                                <label class="w-[140px] text-right pr-4 text-[#606266] pt-2">附件文件：</label>
+                                <div class="flex-1">
+                                    <button class="h-8 px-4 border border-gray-300 rounded text-[#606266] bg-white hover:bg-gray-50 transition-colors text-[13px] flex items-center gap-1.5 mb-2">
+                                        <i class="fa-solid fa-arrow-up-from-bracket"></i> 上传文件
+                                    </button>
+                                    <div class="text-[#909399] text-[12px]">支持扩展名：.rar .zip .doc .docx .pdf .jpg...</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <label class="w-[140px] text-right pr-4 text-[#606266]"><span class="text-red-500 mr-1">*</span>使用单位：</label>
+                                <input type="text" value="A模型开发商" class="flex-1 h-9 px-3 border border-gray-200 bg-gray-50 rounded text-[13px] text-gray-500 focus:outline-none" readonly>
+                            </div>
+                            <div class="flex items-center">
+                                <label class="w-[140px] text-right pr-4 text-[#606266]"><span class="text-red-500 mr-1">*</span>联系方式：</label>
+                                <input type="text" placeholder="请输入" class="flex-1 h-9 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#1c7ffd]">
+                            </div>
+                            <div class="flex items-center">
+                                <label class="w-[140px] text-right pr-4 text-[#606266]"><span class="text-red-500 mr-1">*</span>联系人：</label>
+                                <input type="text" placeholder="请输入" class="flex-1 h-9 px-3 border border-gray-300 rounded text-[13px] focus:outline-none focus:border-[#1c7ffd]">
+                            </div>
+                        </div>
+                        <div class="h-14 bg-gray-50 flex items-center justify-center gap-3 border-t border-gray-100">
+                            <button class="h-8 px-6 border border-gray-300 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] transition-colors text-[13px]" onclick="document.getElementById('applyFrontDbModal').classList.add('hidden')">取消</button>
+                            <button class="h-8 px-6 bg-[#1c7ffd] text-white rounded hover:bg-blue-500 transition-colors text-[13px]" onclick="document.getElementById('applyFrontDbModal').classList.add('hidden')">提交</button>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function openFrontDbDrawer() {
+                        const overlay = document.getElementById('drawerOverlay');
+                        const drawer = document.getElementById('frontDbDrawer');
+                        overlay.classList.remove('hidden');
+                        setTimeout(() => {
+                            drawer.classList.remove('translate-x-full');
+                        }, 10);
+                    }
+
+                    function closeFrontDbDrawer() {
+                        const overlay = document.getElementById('drawerOverlay');
+                        const drawer = document.getElementById('frontDbDrawer');
+                        drawer.classList.add('translate-x-full');
+                        setTimeout(() => {
+                            overlay.classList.add('hidden');
+                        }, 300);
+                    }
+                </script>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

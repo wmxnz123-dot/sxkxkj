@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>协作开发平台 - 开发工作台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col overflow-hidden bg-[#f0f2f5] text-[14px] text-gray-700">
+    <!-- 顶部导航栏 -->
+    <header class="h-14 bg-[#1c7ffd] flex justify-between items-center px-6 text-white shrink-0 shadow-sm z-10">
+        <div class="flex items-center gap-2">
+            <i class="fa-brands fa-space-awesome text-2xl"></i>
+            <span class="text-lg font-medium tracking-wider ml-1">协作开发平台</span>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="relative cursor-pointer hover:text-gray-200 transition-colors" onclick="window.location.href=\'my_messages.html\'">
+                <i class="fa-regular fa-bell text-xl"></i>
+                <span class="absolute -top-1.5 -right-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-[#1c7ffd] leading-none">20</span>
+            </div>
+            <div class="flex items-center gap-2 cursor-pointer hover:text-gray-200 transition-colors">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=yiyun&backgroundColor=b6e3f4" alt="avatar" class="w-8 h-8 rounded-full border border-blue-300 bg-white">
+                <span>yiyun</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体内容 -->
+    <div class="flex-1 flex overflow-hidden">
+                <!-- 左侧主菜单 -->
+        <aside class="w-[200px] bg-white border-r border-gray-200 flex flex-col py-4 shrink-0 overflow-y-auto">
+            <nav class="flex flex-col text-[#606266]" id="main-nav">
+                <a href="workbench.html" class="flex items-center px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="workbench.html">
+                    <i class="fa-solid fa-border-all w-6 text-center text-lg"></i>
+                    <span class="ml-2">开发工作台</span>
+                </a>
+                <a href="scene_center.html" class="flex items-center px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="scene_center.html,index.html,package_resources.html,data_resources.html">
+                    <i class="fa-regular fa-folder-open w-6 text-center text-lg"></i>
+                    <span class="ml-2">任务中心</span>
+                </a>
+                
+                <!-- 开发成果准备 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-code-branch w-6 text-center text-lg"></i>
+                            <span class="ml-2">开发成果准备</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="image_upload.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="image_upload.html">镜像上传</a>
+                        <a href="api_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="api_list.html">API列表</a>
+                        <a href="dataset_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="dataset_list.html">数据集列表</a>
+                    </div>
+                </div>
+
+                <!-- 部署封装 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-box w-6 text-center text-lg"></i>
+                            <span class="ml-2">部署封装</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="model_deploy_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="model_deploy_list.html,model_deploy_add.html,model_deploy_add_step2.html,model_deploy_add_step3.html">模型部署申请</a>
+                        <a href="capability_pack_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="capability_pack_list.html,capability_pack_add.html">能力封装申请</a>
+                    </div>
+                </div>
+
+                <!-- 模型管理 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-cubes w-6 text-center text-lg"></i>
+                            <span class="ml-2">模型管理</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="deployed_model_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="deployed_model_list.html">已部署模型管理</a>
+                        <a href="model_change_record.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="model_change_record.html">模型变更记录</a>
+                        <a href="offline_model_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="offline_model_list.html">已下线模型</a>
+                    </div>
+                </div>
+
+                <a href="capability_management.html" class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="capability_management.html">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-layer-group w-6 text-center text-lg"></i>
+                        <span class="ml-2">能力管理</span>
+                    </div>
+                </a>
+
+                <!-- 产品发布 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-clipboard-check w-6 text-center text-lg"></i>
+                            <span class="ml-2">产品发布</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="product_release.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="product_release.html,product_release_add.html">产品发布</a>
+                        <a href="published_product_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="published_product_list.html">已发布产品管理</a>
+                        <a href="offline_product_list.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="offline_product_list.html">已下线产品</a>
+                    </div>
+                </div>
+
+                                <!-- 资源中心 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-server w-6 text-center text-lg"></i>
+                            <span class="ml-2">资源中心</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="my_front_db.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="my_front_db.html">我的前置库</a>
+                        <a href="#" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item">资源需求管理</a>
+                        <a href="#" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item">数据异议管理</a>
+                    </div>
+                </div>
+
+                <a href="help_center.html" class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="help_center.html">
+                    <div class="flex items-center">
+                        <i class="fa-regular fa-circle-question w-6 text-center text-lg"></i>
+                        <span class="ml-2">帮助中心</span>
+                    </div>
+                </a>
+                
+                <!-- 消息中心 -->
+                <div class="flex flex-col nav-group">
+                    <div class="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 text-[#606266] hover:text-[#1c7ffd] transition-colors cursor-pointer group-header" onclick="toggleNavGroup(this)">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-bullhorn w-6 text-center text-lg"></i>
+                            <span class="ml-2">消息中心</span>
+                        </div>
+                        <i class="fa-solid fa-caret-left text-[10px] text-gray-400 transition-transform duration-200 group-icon"></i>
+                    </div>
+                    <div class="hidden flex-col py-1 group-content">
+                        <a href="my_messages.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors nav-item" data-href="my_messages.html">我的消息</a>
+                        <a href="alert_messages.html" class="mx-2 px-10 py-2.5 rounded-lg hover:bg-gray-50 hover:text-[#1c7ffd] transition-colors mt-1 nav-item" data-href="alert_messages.html">告警消息</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <script>
+            // 侧边栏菜单交互逻辑
+            function toggleNavGroup(element) {
+                const content = element.nextElementSibling;
+                const icon = element.querySelector('.group-icon');
+                
+                // Toggle current group
+                content.classList.toggle('hidden');
+                content.classList.toggle('flex');
+                icon.classList.toggle('-rotate-90');
+                
+                // Toggle active style for header
+                if(!content.classList.contains('hidden')) {
+                    element.classList.add('text-[#1c7ffd]');
+                    element.querySelector('.ml-2').classList.add('font-medium');
+                } else {
+                    // Check if any child is active, if so keep header highlighted
+                    const hasActiveChild = content.querySelector('.bg-blue-50');
+                    if (!hasActiveChild) {
+                        element.classList.remove('text-[#1c7ffd]');
+                        element.querySelector('.ml-2').classList.remove('font-medium');
+                    }
+                }
+            }
+
+            // 初始化菜单高亮
+            document.addEventListener('DOMContentLoaded', () => {
+                const currentPath = window.location.pathname.split('/').pop() || 'workbench.html';
+                const navItems = document.querySelectorAll('.nav-item');
+                
+                navItems.forEach(item => {
+                    const hrefs = item.getAttribute('data-href').split(',');
+                    if (hrefs.includes(currentPath)) {
+                        // 如果是顶级菜单
+                        if (item.parentElement.id === 'main-nav') {
+                            item.classList.add('bg-blue-50', 'text-[#1c7ffd]', 'font-medium', 'border-r-2', 'border-[#1c7ffd]');
+                            item.classList.remove('text-[#606266]');
+                        } else {
+                            // 如果是子菜单
+                            item.classList.add('bg-blue-50', 'text-[#1c7ffd]', 'font-medium');
+                            
+                            // 展开父级菜单
+                            const groupContent = item.closest('.group-content');
+                            const groupHeader = groupContent.previousElementSibling;
+                            const groupIcon = groupHeader.querySelector('.group-icon');
+                            
+                            groupContent.classList.remove('hidden');
+                            groupContent.classList.add('flex');
+                            groupIcon.classList.add('-rotate-90');
+                            
+                            groupHeader.classList.add('text-[#1c7ffd]');
+                            groupHeader.querySelector('.ml-2').classList.add('font-medium');
+                        }
+                    }
+                });
+            });
+        </script>
+
+                <!-- 右侧内容区 -->
+        <main class="flex-1 flex flex-col overflow-hidden bg-[#f0f2f5]">
+            <!-- 核心内容容器 -->
+            <div class="flex-1 p-6 flex flex-col gap-5 overflow-y-auto">
+                
+                <!-- 欢迎头部 -->
+                <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-6 shadow-sm relative overflow-hidden flex flex-col justify-center min-h-[100px]">
+                    <img src="./images/img01.png" class="absolute right-10 bottom-0 h-[140px] object-contain z-0 pointer-events-none" alt="welcome">
+                    <h1 class="text-2xl font-bold text-[#303133] mb-4 relative z-10 tracking-wider">欢迎登录，yiyun！</h1>
+                    <div class="flex items-center gap-12 text-[#606266] text-[14px] relative z-10">
+                        <div class="flex items-center">
+                            <span class="text-[#909399]">单位名称：</span>
+                            <span class="font-medium">山东亿云信息技术有限公司</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-[#909399]">开发者名称：</span>
+                            <span class="font-medium">开发者一号</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 任务导航 -->
+                <div class="bg-gradient-to-r from-[#eef2ff] to-[#e6f0ff] rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-6 relative overflow-hidden">
+                    <img src="./images/navigation_bg.png" class="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none z-0" alt="nav-bg">
+                    <div class="flex items-center relative z-10">
+                        <h2 class="text-[16px] font-bold text-[#1c7ffd] mr-8 whitespace-nowrap">开发导航</h2>
+                        
+                        <div class="relative flex-1 py-6">
+                            <!-- 进度条线 -->
+                            <div class="absolute top-[48px] left-[2%] right-[2%] h-2 bg-gradient-to-r from-[#718df2] via-[#8ba3f7] to-[#b3c7fa] rounded-full">
+                            </div>
+                            
+                            <div class="flex justify-between relative z-10">
+                                <!-- Step 1 -->
+                                <div class="flex flex-col items-center w-1/4">
+                                    <div class="bg-white rounded-full px-5 py-2.5 flex items-center gap-4 text-sm border border-blue-50 shadow-sm whitespace-nowrap -mt-7">
+                                        <div class="w-5 h-5 rounded-full bg-[#5a8bfb] text-white flex items-center justify-center text-xs font-bold">1</div>
+                                        <span class="text-[#5a8bfb] font-bold cursor-pointer hover:underline">任务查看</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#5a8bfb]">我的数据</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#5a8bfb]">我的套餐</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#5a8bfb]">我的开发者</span>
+                                    </div>
+                                    <div class="w-3.5 h-3.5 rounded-full bg-white border-2 border-[#5a8bfb] mt-5 shadow-sm"></div>
+                                </div>
+                                
+                                <!-- Step 2 -->
+                                <div class="flex flex-col items-center w-1/4">
+                                    <div class="w-3.5 h-3.5 rounded-full bg-white border-2 border-[#36c2aa] mt-5 shadow-sm"></div>
+                                    <div class="bg-white rounded-full px-5 py-2.5 flex items-center gap-4 text-sm border border-blue-50 shadow-sm whitespace-nowrap mt-5">
+                                        <div class="w-5 h-5 rounded-full bg-[#36c2aa] text-white flex items-center justify-center text-xs font-bold">2</div>
+                                        <span class="text-[#36c2aa] font-bold cursor-pointer hover:underline">开发产物</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#36c2aa]">镜像上传</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#36c2aa]">API产物</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#36c2aa]">数据集产物</span>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3 -->
+                                <div class="flex flex-col items-center w-1/4">
+                                    <div class="bg-white rounded-full px-5 py-2.5 flex items-center gap-4 text-sm border border-blue-50 shadow-sm whitespace-nowrap -mt-7">
+                                        <div class="w-5 h-5 rounded-full bg-[#7a6df4] text-white flex items-center justify-center text-xs font-bold">3</div>
+                                        <span class="text-[#7a6df4] font-bold cursor-pointer hover:underline">产物封装</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#7a6df4]">离线模型发布</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#7a6df4]">能力封装接入</span>
+                                    </div>
+                                    <div class="w-3.5 h-3.5 rounded-full bg-white border-2 border-[#7a6df4] mt-5 shadow-sm"></div>
+                                </div>
+
+                                <!-- Step 4 -->
+                                <div class="flex flex-col items-center w-1/4">
+                                    <div class="w-3.5 h-3.5 rounded-full bg-white border-2 border-[#8ba3f7] mt-5 shadow-sm"></div>
+                                    <div class="bg-white rounded-full px-5 py-2.5 flex items-center gap-4 text-sm border border-blue-50 shadow-sm whitespace-nowrap mt-5">
+                                        <div class="w-5 h-5 rounded-full bg-[#4fa1f5] text-white flex items-center justify-center text-xs font-bold">4</div>
+                                        <span class="text-[#4fa1f5] font-bold cursor-pointer hover:underline">产品发布</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#4fa1f5]">产品发布</span>
+                                        <span class="text-gray-200">|</span>
+                                        <span class="text-[#606266] cursor-pointer hover:text-[#4fa1f5]">产品管理</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-5 flex-1 min-h-[300px]">
+                    <!-- 任务中心 -->
+                    <div class="flex-1 bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-6 flex flex-col">
+                        <div class="flex justify-between items-center mb-5">
+                            <h2 class="text-[16px] font-bold text-[#303133]">任务中心</h2>
+                            <a href="scene_center.html" class="text-sm text-gray-400 hover:text-[#1c7ffd] flex items-center">查看更多 <i class="fa-solid fa-angle-right ml-1 text-xs"></i></a>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto pr-2 pb-2 content-start">
+                            <!-- Card 1 -->
+                            <div class="group relative bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden flex flex-col h-[210px] transition-all hover:shadow-lg hover:border-blue-200 cursor-default">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#ffffff] via-[#f0f6ff] to-[#e1edff] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                                    <svg class="absolute bottom-0 right-0 w-full h-full opacity-60 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <path d="M100,100 L100,40 C80,70 50,90 0,100 Z" fill="rgba(64,158,255,0.06)"></path>
+                                        <path d="M100,100 L100,0 C70,40 30,80 0,100 Z" fill="rgba(64,158,255,0.04)"></path>
+                                    </svg>
+                                </div>
+                                <div class="relative z-10 p-5 flex flex-col h-full">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-11 h-11 rounded-full bg-[#1c7ffd] text-white flex items-center justify-center text-xl shadow-sm shrink-0">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线任务...">测试离线任务...</span>
+                                                <span class="text-[#909399] text-[12px] mt-0.5">任务编号：CJ20260602002</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-[#1c7ffd] text-white px-2 py-0.5 rounded-full text-[11px] flex items-center shadow-sm whitespace-nowrap">
+                                            <i class="fa-solid fa-circle-check mr-1"></i> 已授权
+                                        </div>
+                                    </div>
+                                    <div class="border-b border-gray-100 mb-3 group-hover:border-blue-100 transition-colors duration-300"></div>
+                                    <div class="flex flex-col gap-1.5 mb-auto">
+                                        <span class="text-[#606266] text-[13px] truncate" title="任务描述：测试离线任务_20260602002">任务描述：测试离线任务_20260602002</span>
+                                        <div class="flex items-center gap-6 text-[#909399] text-[13px] mt-1">
+                                            <span>数据资源数量：12</span>
+                                            <span>开发人数：1</span>
+                                        </div>
+                                    </div>
+                                    <div class="relative h-8 mt-4 overflow-hidden">
+                                        <div class="absolute inset-0 flex items-center text-[#909399] text-[12px] transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
+                                            更新时间：2026-06-02 13:30:35
+                                        </div>
+                                        <div class="absolute inset-0 flex items-center gap-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                                            <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">任务详情</a>
+                                            <a href="package_resources.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">套餐资源</a>
+                                            <a href="#" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">数据资源</a>
+                                            <a href="#" class="flex-1 text-center py-1.5 bg-[#1c7ffd] border border-[#1c7ffd] rounded text-white hover:bg-blue-600 text-[12px] transition-colors shadow-sm cursor-pointer">开发者</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="group relative bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden flex flex-col h-[210px] transition-all hover:shadow-lg hover:border-blue-200 cursor-default">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#ffffff] via-[#f0f6ff] to-[#e1edff] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                                    <svg class="absolute bottom-0 right-0 w-full h-full opacity-60 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <path d="M100,100 L100,40 C80,70 50,90 0,100 Z" fill="rgba(64,158,255,0.06)"></path>
+                                        <path d="M100,100 L100,0 C70,40 30,80 0,100 Z" fill="rgba(64,158,255,0.04)"></path>
+                                    </svg>
+                                </div>
+                                <div class="relative z-10 p-5 flex flex-col h-full">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-11 h-11 rounded-full bg-[#1c7ffd] text-white flex items-center justify-center text-xl shadow-sm shrink-0">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线任务...">测试离线任务...</span>
+                                                <span class="text-[#909399] text-[12px] mt-0.5">任务编号：CJ20260602001</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-[#1c7ffd] text-white px-2 py-0.5 rounded-full text-[11px] flex items-center shadow-sm whitespace-nowrap">
+                                            <i class="fa-solid fa-circle-check mr-1"></i> 已授权
+                                        </div>
+                                    </div>
+                                    <div class="border-b border-gray-100 mb-3 group-hover:border-blue-100 transition-colors duration-300"></div>
+                                    <div class="flex flex-col gap-1.5 mb-auto">
+                                        <span class="text-[#606266] text-[13px] truncate" title="任务描述：测试离线任务_20260602001">任务描述：测试离线任务_20260602001</span>
+                                        <div class="flex items-center gap-6 text-[#909399] text-[13px] mt-1">
+                                            <span>数据资源数量：3</span>
+                                            <span>开发人数：1</span>
+                                        </div>
+                                    </div>
+                                    <div class="relative h-8 mt-4 overflow-hidden">
+                                        <div class="absolute inset-0 flex items-center text-[#909399] text-[12px] transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
+                                            更新时间：2026-06-02 13:30:35
+                                        </div>
+                                        <div class="absolute inset-0 flex items-center gap-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                                            <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">任务详情</a>
+                                            <a href="package_resources.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">套餐资源</a>
+                                            <a href="#" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">数据资源</a>
+                                            <a href="#" class="flex-1 text-center py-1.5 bg-[#1c7ffd] border border-[#1c7ffd] rounded text-white hover:bg-blue-600 text-[12px] transition-colors shadow-sm cursor-pointer">开发者</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="group relative bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden flex flex-col h-[210px] transition-all hover:shadow-lg hover:border-blue-200 cursor-default">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#ffffff] via-[#f0f6ff] to-[#e1edff] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                                    <svg class="absolute bottom-0 right-0 w-full h-full opacity-60 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <path d="M100,100 L100,40 C80,70 50,90 0,100 Z" fill="rgba(64,158,255,0.06)"></path>
+                                        <path d="M100,100 L100,0 C70,40 30,80 0,100 Z" fill="rgba(64,158,255,0.04)"></path>
+                                    </svg>
+                                </div>
+                                <div class="relative z-10 p-5 flex flex-col h-full">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-11 h-11 rounded-full bg-[#1c7ffd] text-white flex items-center justify-center text-xl shadow-sm shrink-0">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线任务...">测试离线任务...</span>
+                                                <span class="text-[#909399] text-[12px] mt-0.5">任务编号：CJ20260521003</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full text-[11px] flex items-center shadow-sm whitespace-nowrap">
+                                            <i class="fa-solid fa-circle-minus mr-1"></i> 已取消
+                                        </div>
+                                    </div>
+                                    <div class="border-b border-gray-100 mb-3 group-hover:border-blue-100 transition-colors duration-300"></div>
+                                    <div class="flex flex-col gap-1.5 mb-auto">
+                                        <span class="text-[#606266] text-[13px] truncate" title="任务描述：测试离线任务_20260521003">任务描述：测试离线任务_20260521003</span>
+                                        <div class="flex items-center gap-6 text-[#909399] text-[13px] mt-1">
+                                            <span>数据资源数量：3</span>
+                                            <span>开发人数：1</span>
+                                        </div>
+                                    </div>
+                                    <div class="relative h-8 mt-4 overflow-hidden">
+                                        <div class="absolute inset-0 flex items-center text-[#909399] text-[12px] transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
+                                            更新时间：2026-05-21 11:48:31
+                                        </div>
+                                        <div class="absolute inset-0 flex items-center gap-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                                            <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">任务详情</a>
+                                            <a href="package_resources.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">套餐资源</a>
+                                            <a href="#" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">数据资源</a>
+                                            <a href="#" class="flex-1 text-center py-1.5 bg-[#1c7ffd] border border-[#1c7ffd] rounded text-white hover:bg-blue-600 text-[12px] transition-colors shadow-sm cursor-pointer">开发者</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 快捷入口 -->
+                    <div class="w-[280px] bg-white rounded-lg shadow-[0_2px_12px_0_rgba(0,0,0,0.05)] p-5 flex flex-col shrink-0">
+                        <h2 class="text-[16px] font-bold text-[#303133] mb-4">快捷入口</h2>
+                        
+                        <div class="flex flex-col gap-3 overflow-y-auto pr-1 flex-1">
+                            <!-- 快捷入口 1 -->
+                            <div class="border-2 border-dashed border-[#a3bffa] rounded-lg p-5 flex flex-col items-center justify-center bg-blue-50 cursor-pointer hover:bg-blue-100 hover:border-[#1c7ffd] transition-all group">
+                                <img src="./images/quick-icon1.png" alt="icon" class="w-16 h-16 mb-3 object-contain group-hover:scale-110 transition-transform">
+                                <span class="text-[#1c7ffd] font-medium">授权运营门户</span>
+                            </div>
+                            
+                            <!-- 快捷入口 2 -->
+                            <div class="border-2 border-dashed border-[#a3bffa] rounded-lg p-5 flex flex-col items-center justify-center bg-blue-50 cursor-pointer hover:bg-blue-100 hover:border-[#1c7ffd] transition-all group">
+                                <img src="./images/quick-icon2.png" alt="icon" class="w-16 h-16 mb-3 object-contain group-hover:scale-110 transition-transform">
+                                <span class="text-[#1c7ffd] font-medium">数据交易平台</span>
+                            </div>
+                            
+                            <!-- 快捷入口 3 -->
+                            <div class="border-2 border-dashed border-[#a3bffa] rounded-lg p-5 flex flex-col items-center justify-center bg-blue-50 cursor-pointer hover:bg-blue-100 hover:border-[#1c7ffd] transition-all group">
+                                <img src="./images/quick-icon3.png" alt="icon" class="w-16 h-16 mb-3 object-contain group-hover:scale-110 transition-transform">
+                                <span class="text-gray-400 font-medium tracking-widest">...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>
