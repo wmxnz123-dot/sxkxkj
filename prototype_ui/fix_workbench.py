@@ -57,6 +57,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                         <span class="text-[#606266] text-[13px] truncate" title="任务描述：测试离线任务_20260602002">任务描述：测试离线任务_20260602002</span>
                                         <div class="flex items-center gap-6 text-[#909399] text-[13px] mt-1">
                                             <span>数据资源数量：12</span>
+                                            <span>数据产品数量：0</span>
                                             <span>开发人数：1</span>
                                         </div>
                                     </div>
@@ -102,6 +103,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                         <span class="text-[#606266] text-[13px] truncate" title="任务描述：测试离线任务_20260602001">任务描述：测试离线任务_20260602001</span>
                                         <div class="flex items-center gap-6 text-[#909399] text-[13px] mt-1">
                                             <span>数据资源数量：3</span>
+                                            <span>数据产品数量：0</span>
                                             <span>开发人数：1</span>
                                         </div>
                                     </div>
@@ -147,6 +149,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                         <span class="text-[#606266] text-[13px] truncate" title="任务描述：测试离线任务_20260521003">任务描述：测试离线任务_20260521003</span>
                                         <div class="flex items-center gap-6 text-[#909399] text-[13px] mt-1">
                                             <span>数据资源数量：3</span>
+                                            <span>数据产品数量：0</span>
                                             <span>开发人数：1</span>
                                         </div>
                                     </div>
