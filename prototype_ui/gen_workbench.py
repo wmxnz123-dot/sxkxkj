@@ -111,7 +111,7 @@ workbench_content = """        <!-- 右侧内容区 -->
                                         </div>
                                         <div>
                                             <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线任务_20260602002</div>
-                                            <div class="text-xs text-[#909399]">任务编号: CJ20260602002</div>
+                                            <div class="text-xs text-[#909399]">任务ID: CJ20260602002</div>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 bg-[#409EFF] text-white text-xs rounded-full">已授权</span>
@@ -133,7 +133,7 @@ workbench_content = """        <!-- 右侧内容区 -->
                                         </div>
                                         <div>
                                             <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线任务_20260602001</div>
-                                            <div class="text-xs text-[#909399]">任务编号: CJ20260602001</div>
+                                            <div class="text-xs text-[#909399]">任务ID: CJ20260602001</div>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 bg-[#409EFF] text-white text-xs rounded-full">已授权</span>
@@ -155,7 +155,7 @@ workbench_content = """        <!-- 右侧内容区 -->
                                         </div>
                                         <div>
                                             <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线任务_20260521003</div>
-                                            <div class="text-xs text-[#909399]">任务编号: CJ20260521003</div>
+                                            <div class="text-xs text-[#909399]">任务ID: CJ20260521003</div>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 bg-[#409EFF] text-white text-xs rounded-full">已授权</span>
@@ -177,7 +177,7 @@ workbench_content = """        <!-- 右侧内容区 -->
                                         </div>
                                         <div>
                                             <div class="font-bold text-[#303133] text-[15px] mb-1 group-hover:text-[#409EFF] transition-colors">测试离线任务_20260521002</div>
-                                            <div class="text-xs text-[#909399]">任务编号: CJ20260521002</div>
+                                            <div class="text-xs text-[#909399]">任务ID: CJ20260521002</div>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 bg-[#409EFF] text-white text-xs rounded-full">已授权</span>

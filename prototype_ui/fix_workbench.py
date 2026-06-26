@@ -45,7 +45,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                             </div>
                                             <div class="flex flex-col">
                                                 <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线任务...">测试离线任务...</span>
-                                                <span class="text-[#909399] text-[12px] mt-0.5">任务编号：CJ20260602002</span>
+                                                <span class="text-[#909399] text-[12px] mt-0.5">任务ID：CJ20260602002</span>
                                             </div>
                                         </div>
                                         <div class="bg-[#1c7ffd] text-white px-2 py-0.5 rounded-full text-[11px] flex items-center shadow-sm whitespace-nowrap">
@@ -63,7 +63,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                     </div>
                                     <div class="relative h-8 mt-4 overflow-hidden">
                                         <div class="absolute inset-0 flex items-center text-[#909399] text-[12px] transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
-                                            更新时间：2026-06-02 13:30:35
+                                            任务开始时间：2026-06-02 &nbsp;&nbsp; 任务截止时间：2026-12-31
                                         </div>
                                         <div class="absolute inset-0 flex items-center gap-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                                             <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">任务详情</a>
@@ -91,7 +91,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                             </div>
                                             <div class="flex flex-col">
                                                 <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线任务...">测试离线任务...</span>
-                                                <span class="text-[#909399] text-[12px] mt-0.5">任务编号：CJ20260602001</span>
+                                                <span class="text-[#909399] text-[12px] mt-0.5">任务ID：CJ20260602001</span>
                                             </div>
                                         </div>
                                         <div class="bg-[#1c7ffd] text-white px-2 py-0.5 rounded-full text-[11px] flex items-center shadow-sm whitespace-nowrap">
@@ -109,7 +109,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                     </div>
                                     <div class="relative h-8 mt-4 overflow-hidden">
                                         <div class="absolute inset-0 flex items-center text-[#909399] text-[12px] transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
-                                            更新时间：2026-06-02 13:30:35
+                                            任务开始时间：2026-06-02 &nbsp;&nbsp; 任务截止时间：2026-12-31
                                         </div>
                                         <div class="absolute inset-0 flex items-center gap-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                                             <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">任务详情</a>
@@ -137,7 +137,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                             </div>
                                             <div class="flex flex-col">
                                                 <span class="text-[#303133] font-bold text-[15px] truncate w-32" title="测试离线任务...">测试离线任务...</span>
-                                                <span class="text-[#909399] text-[12px] mt-0.5">任务编号：CJ20260521003</span>
+                                                <span class="text-[#909399] text-[12px] mt-0.5">任务ID：CJ20260521003</span>
                                             </div>
                                         </div>
                                         <div class="bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full text-[11px] flex items-center shadow-sm whitespace-nowrap">
@@ -155,7 +155,7 @@ task_center_new = """<div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto p
                                     </div>
                                     <div class="relative h-8 mt-4 overflow-hidden">
                                         <div class="absolute inset-0 flex items-center text-[#909399] text-[12px] transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-4">
-                                            更新时间：2026-05-21 11:48:31
+                                            任务开始时间：2026-05-21 &nbsp;&nbsp; 任务截止时间：2026-12-31
                                         </div>
                                         <div class="absolute inset-0 flex items-center gap-2 opacity-0 translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
                                             <a href="index.html" class="flex-1 text-center py-1.5 bg-white border border-gray-200 rounded text-[#606266] hover:text-[#1c7ffd] hover:border-[#1c7ffd] hover:bg-blue-50 text-[12px] transition-colors shadow-sm cursor-pointer">任务详情</a>

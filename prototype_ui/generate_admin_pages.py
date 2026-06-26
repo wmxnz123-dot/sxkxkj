@@ -512,7 +512,7 @@ def generate_test_apply():
                                         <i class="fa-solid fa-circle text-[8px] text-[#f56c6c]"></i>
                                         <span class="text-[#f56c6c]">开通失败</span>
                                     </div>
-                                    <div class="text-[#909399] text-[13px]">更新时间：2026-04-22 16:27:09</div>
+                                    <div class="text-[#909399] text-[13px]">任务开始时间：2026-04-22 &nbsp;&nbsp; 任务截止时间：2026-12-31</div>
                                 </div>
                             </div>
                         </div>
@@ -1108,7 +1108,7 @@ def generate_data_resource_apply():
                                         <i class="fa-solid fa-circle text-[8px] text-[#3b82f6]"></i>
                                         <span class="text-[#3b82f6]">开通中</span>
                                     </div>
-                                    <div class="text-[#909399] text-[13px]">更新时间：2026-06-02 15:00:37</div>
+                                    <div class="text-[#909399] text-[13px]">任务开始时间：2026-06-02 &nbsp;&nbsp; 任务截止时间：2026-12-31</div>
                                 </div>
                             </div>
                         </div>
@@ -2160,7 +2160,7 @@ def generate_package_manage():
                                         <div class="text-[#909399] text-[13px]">套餐编码：PIR_LARGE</div>
                                     </div>
                                 </div>
-                                <div class="text-[#909399] text-[13px]">更新时间：2026-03-20 15:34:04</div>
+                                <div class="text-[#909399] text-[13px]">任务开始时间：2026-03-20 &nbsp;&nbsp; 任务截止时间：2026-12-31</div>
                             </div>
                         </div>
                         
@@ -2379,7 +2379,7 @@ def generate_space_usage_manage():
                                         <div class="text-[#909399] text-[13px]">单位名称：山东亿云信息技术有限公司</div>
                                     </div>
                                 </div>
-                                <div class="text-[#909399] text-[13px]">更新时间：2026-06-02 13:43:07</div>
+                                <div class="text-[#909399] text-[13px]">任务开始时间：2026-06-02 &nbsp;&nbsp; 任务截止时间：2026-12-31</div>
                             </div>
                         </div>
                         

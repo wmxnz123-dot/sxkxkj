@@ -115,7 +115,7 @@ drawer2 = """
                 </div>
                 <div class="flex justify-between items-center text-sm text-[#909399] ml-11">
                     <span>单位名称：山东亿云信息技术有限公司</span>
-                    <span>更新时间：2026-03-09 15:30:07</span>
+                    <span>任务开始时间：2026-03-09 &nbsp;&nbsp; 任务截止时间：2026-12-31</span>
                 </div>
             </div>
 
@@ -220,7 +220,7 @@ drawer3 = """
                 </div>
                 <div class="flex justify-between items-center text-sm text-[#909399] ml-11">
                     <span>单位名称：山东亿云信息技术有限公司</span>
-                    <span>更新时间：2026-03-06 13:33:07</span>
+                    <span>任务开始时间：2026-03-06 &nbsp;&nbsp; 任务截止时间：2026-12-31</span>
                 </div>
             </div>
 
