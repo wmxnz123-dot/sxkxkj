@@ -256,6 +256,9 @@
                             <div id="tab-data-product" class="py-3 px-2 text-[#606266] hover:text-[#1c7ffd] mr-8 cursor-pointer transition-colors" onclick="switchDataTab('product')">
                                 数据产品
                             </div>
+                            <div id="tab-data-public-product" class="py-3 px-2 text-[#606266] hover:text-[#1c7ffd] mr-8 cursor-pointer transition-colors" onclick="switchDataTab('public-product')">
+                                公共数据产品
+                            </div>
                         </div>
 
                         <!-- 列表区: 数据资源 -->
@@ -376,6 +379,78 @@
                                             <td class="py-4 px-2 truncate" title="陕西省公安厅">陕西省公安厅</td>
                                             <td class="py-4 px-2 text-center">V1.0</td>
                                             <td class="py-4 px-2 text-center">API</td>
+                                            <td class="py-4 px-2 truncate" title="2026-06-01 10:00:00">2026-06-01 10:00:00</td>
+                                            <td class="py-4 px-2 truncate" title="2027-06-01 10:00:00">2027-06-01 10:00:00</td>
+                                            <td class="py-4 px-2 text-center">
+                                                <a href="#" class="text-[#1c7ffd] hover:underline mx-1" onclick="openDataProductDrawer()">查看</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="flex justify-end items-center mt-4 text-[13px] text-[#606266] gap-2 pt-4 border-t border-gray-100">
+                                <span>共 1 条</span>
+                                <div class="flex items-center gap-1">
+                                    <button class="w-8 h-8 flex items-center justify-center border border-gray-200 rounded text-gray-300 cursor-not-allowed"><i class="fa-solid fa-angle-left text-[10px]"></i></button>
+                                    <button class="w-8 h-8 flex items-center justify-center border border-[#1c7ffd] bg-[#1c7ffd] text-white rounded">1</button>
+                                    <button class="w-8 h-8 flex items-center justify-center border border-gray-200 rounded text-gray-300 cursor-not-allowed"><i class="fa-solid fa-angle-right text-[10px]"></i></button>
+                                </div>
+                                <div class="relative">
+                                    <select class="h-8 px-3 border border-gray-200 rounded focus:outline-none focus:border-[#1c7ffd] appearance-none pr-6 bg-white">
+                                        <option>10 条/页</option>
+                                    </select>
+                                    <i class="fa-solid fa-angle-down absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-[10px] pointer-events-none"></i>
+                                </div>
+                            </div>
+                        </div>
+
+<!-- 列表区: 公共数据产品 -->
+                        <div id="content-data-public-product" class="flex-1 flex flex-col mt-6 relative hidden">
+                            <div class="flex justify-between items-center mb-4">
+                                <h2 class="text-[15px] font-bold text-[#303133]">公共数据产品列表</h2>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-rotate-right text-gray-400 cursor-pointer hover:text-[#1c7ffd]"></i>
+                                    <i class="fa-solid fa-gear text-gray-400 cursor-pointer hover:text-[#1c7ffd]"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="flex-1 overflow-x-auto">
+                                <table class="w-full text-left text-[13px] text-[#606266] table-fixed">
+                                    <thead class="bg-[#f8f8f9] text-[#909399] font-medium border-b border-gray-200">
+                                        <tr>
+                                            <th class="py-3 px-2 text-center w-12">序号</th>
+                                            <th class="py-3 px-2 w-32 truncate" title="数据产品标识码">数据产品标识码</th>
+                                            <th class="py-3 px-2 w-32 truncate" title="数据产品名称">数据产品名称</th>
+                                            <th class="py-3 px-2 w-32 truncate" title="产品提供方">产品提供方</th>
+                                            <th class="py-3 px-2 text-center w-20">使用版本</th>
+                                            <th class="py-3 px-2 text-center w-20">产品类型</th>
+                                            <th class="py-3 px-2 w-36">订购开始时间</th>
+                                            <th class="py-3 px-2 w-36">订购结束时间</th>
+                                            <th class="py-3 px-2 text-center w-16">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                            <td class="py-4 px-2 text-center">1</td>
+                                            <td class="py-4 px-2 truncate" title="DP20260601001">DP20260601001</td>
+                                            <td class="py-4 px-2 truncate" title="人口基础信息查询">人口基础信息查询</td>
+                                            <td class="py-4 px-2 truncate" title="陕西省公安厅">陕西省公安厅</td>
+                                            <td class="py-4 px-2 text-center">V1.0</td>
+                                            <td class="py-4 px-2 text-center">API</td>
+                                            <td class="py-4 px-2 truncate" title="2026-06-01 10:00:00">2026-06-01 10:00:00</td>
+                                            <td class="py-4 px-2 truncate" title="2027-06-01 10:00:00">2027-06-01 10:00:00</td>
+                                            <td class="py-4 px-2 text-center">
+                                                <a href="#" class="text-[#1c7ffd] hover:underline mx-1" onclick="openDataProductDrawer()">查看</a>
+                                            </td>
+                                        </tr>
+<tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                            <td class="py-4 px-2 text-center">2</td>
+                                            <td class="py-4 px-2 truncate" title="DS20260601002">DS20260601002</td>
+                                            <td class="py-4 px-2 truncate" title="企业基础信息库">企业基础信息库</td>
+                                            <td class="py-4 px-2 truncate" title="陕西省公安厅">陕西省公安厅</td>
+                                            <td class="py-4 px-2 text-center">V1.0</td>
+                                            <td class="py-4 px-2 text-center">数据集</td>
                                             <td class="py-4 px-2 truncate" title="2026-06-01 10:00:00">2026-06-01 10:00:00</td>
                                             <td class="py-4 px-2 truncate" title="2027-06-01 10:00:00">2027-06-01 10:00:00</td>
                                             <td class="py-4 px-2 text-center">
@@ -793,11 +868,13 @@
                         function switchDataTab(tabName) {
                             const tabs = {
                                 'resource': document.getElementById('tab-data-resource'),
-                                'product': document.getElementById('tab-data-product')
+                                'product': document.getElementById('tab-data-product'),
+                                'public-product': document.getElementById('tab-data-public-product')
                             };
                             const contents = {
                                 'resource': document.getElementById('content-data-resource'),
-                                'product': document.getElementById('content-data-product')
+                                'product': document.getElementById('content-data-product'),
+                                'public-product': document.getElementById('content-data-public-product')
                             };
 
                             for (let key in tabs) {
