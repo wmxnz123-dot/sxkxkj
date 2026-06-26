@@ -762,7 +762,7 @@ def generate_data_resources():
                                         <div>
                                             <div class="text-[18px] font-bold text-[#303133] mb-1 flex items-center gap-2">
                                                 资源名称：企业工商数据 
-                                                <span class="bg-blue-50 text-[#1c7ffd] text-[12px] px-2 py-0.5 rounded border border-blue-100 font-normal">API</span>
+                                                <span class="bg-blue-50 text-[#1c7ffd] text-[12px] px-2 py-0.5 rounded border border-blue-100 font-normal">库表</span>
                                             </div>
                                             <div class="text-[#909399] text-[13px]">资源编码：PD202508140001</div>
                                         </div>
@@ -777,8 +777,7 @@ def generate_data_resources():
                                 <div class="flex border-b border-gray-100 px-6">
                                     <div id="drawer-tab-basic" class="py-3 px-2 text-[#1c7ffd] border-b-2 border-[#1c7ffd] font-medium mr-8 cursor-pointer text-[14px]" onclick="switchDrawerTab('basic')">基本信息</div>
                                     <div id="drawer-tab-apply" class="py-3 px-2 text-[#606266] hover:text-[#1c7ffd] mr-8 cursor-pointer transition-colors text-[14px]" onclick="switchDrawerTab('apply')">申请信息</div>
-                                    <div id="drawer-tab-sample" class="py-3 px-2 text-[#606266] hover:text-[#1c7ffd] cursor-pointer transition-colors text-[14px]" onclick="switchDrawerTab('sample')">样例数据</div>
-                                </div>
+                                    </div>
                                 
                                 <!-- 基本信息内容 -->
                                 <div id="drawer-content-basic" class="p-6">
@@ -923,11 +922,7 @@ def generate_data_resources():
                                     </div>
                                 </div>
 
-                                <!-- 样例数据内容 -->
-                                <div id="drawer-content-sample" class="p-6 hidden">
-                                    <div class="text-center py-10 text-gray-400">暂无样例数据</div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                     
@@ -1160,12 +1155,12 @@ def generate_data_resources():
                             const tabs = {
                                 'basic': document.getElementById('drawer-tab-basic'),
                                 'apply': document.getElementById('drawer-tab-apply'),
-                                'sample': document.getElementById('drawer-tab-sample')
+                                
                             };
                             const contents = {
                                 'basic': document.getElementById('drawer-content-basic'),
                                 'apply': document.getElementById('drawer-content-apply'),
-                                'sample': document.getElementById('drawer-content-sample')
+                                
                             };
 
                             for (let key in tabs) {
