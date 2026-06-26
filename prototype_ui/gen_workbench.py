@@ -27,7 +27,8 @@ workbench_content = """        <!-- 右侧内容区 -->
                         <span class="w-1 h-4 bg-[#409EFF] rounded-full mr-2"></span>开发导航
                     </h2>
                     
-                    <div class="relative px-8 pb-4">
+                    <div class="overflow-x-auto relative px-8 pb-4 custom-scrollbar">
+                        <div class="min-w-[950px]">
                         <!-- 进度条线 -->
                         <div class="absolute top-[18px] left-[10%] right-[10%] h-1 bg-blue-100 rounded-full">
                             <div class="h-full bg-[#409EFF] rounded-full w-0"></div>
@@ -37,7 +38,7 @@ workbench_content = """        <!-- 右侧内容区 -->
                             <!-- Step 1 -->
                             <div class="flex flex-col items-center w-1/4">
                                 <div class="w-10 h-10 rounded-full bg-[#409EFF] text-white flex items-center justify-center font-bold text-lg mb-4 shadow-md border-4 border-white">1</div>
-                                <div class="bg-blue-50 rounded-full px-4 py-2 flex items-center gap-3 text-sm border border-blue-100 shadow-sm whitespace-nowrap">
+                                <div class="bg-blue-50 rounded-full px-4 py-2 flex items-center gap-2 text-[13px] border border-blue-100 shadow-sm whitespace-nowrap">
                                     <span class="text-[#409EFF] font-medium cursor-pointer hover:underline">任务查看</span>
                                     <span class="text-gray-300">|</span>
                                     <span class="text-[#606266] cursor-pointer hover:text-[#409EFF]">我的数据</span>
@@ -51,7 +52,7 @@ workbench_content = """        <!-- 右侧内容区 -->
                             <!-- Step 2 -->
                             <div class="flex flex-col items-center w-1/4 mt-16">
                                 <div class="w-10 h-10 rounded-full bg-blue-200 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm border-4 border-white">2</div>
-                                <div class="bg-gray-50 rounded-full px-4 py-2 flex items-center gap-3 text-sm border border-gray-100 shadow-sm whitespace-nowrap">
+                                <div class="bg-gray-50 rounded-full px-4 py-2 flex items-center gap-2 text-[13px] border border-gray-100 shadow-sm whitespace-nowrap">
                                     <span class="text-gray-400 font-medium cursor-pointer hover:text-[#409EFF]">开发产物</span>
                                     <span class="text-gray-300">|</span>
                                     <span class="text-[#606266] cursor-pointer hover:text-[#409EFF]">镜像上传</span>
@@ -65,7 +66,7 @@ workbench_content = """        <!-- 右侧内容区 -->
                             <!-- Step 3 -->
                             <div class="flex flex-col items-center w-1/4">
                                 <div class="w-10 h-10 rounded-full bg-blue-200 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm border-4 border-white">3</div>
-                                <div class="bg-gray-50 rounded-full px-4 py-2 flex items-center gap-3 text-sm border border-gray-100 shadow-sm whitespace-nowrap">
+                                <div class="bg-gray-50 rounded-full px-4 py-2 flex items-center gap-2 text-[13px] border border-gray-100 shadow-sm whitespace-nowrap">
                                     <span class="text-gray-400 font-medium cursor-pointer hover:text-[#409EFF]">产物封装</span>
                                     <span class="text-gray-300">|</span>
                                     <span class="text-[#606266] cursor-pointer hover:text-[#409EFF]">离线模型发布</span>
@@ -77,13 +78,14 @@ workbench_content = """        <!-- 右侧内容区 -->
                             <!-- Step 4 -->
                             <div class="flex flex-col items-center w-1/4 mt-16">
                                 <div class="w-10 h-10 rounded-full bg-blue-200 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm border-4 border-white">4</div>
-                                <div class="bg-gray-50 rounded-full px-4 py-2 flex items-center gap-3 text-sm border border-gray-100 shadow-sm whitespace-nowrap">
+                                <div class="bg-gray-50 rounded-full px-4 py-2 flex items-center gap-2 text-[13px] border border-gray-100 shadow-sm whitespace-nowrap">
                                     <span class="text-gray-400 font-medium cursor-pointer hover:text-[#409EFF]">产品发布</span>
                                     <span class="text-gray-300">|</span>
                                     <span class="text-[#606266] cursor-pointer hover:text-[#409EFF]">产品发布</span>
                                     <span class="text-gray-300">|</span>
                                     <span class="text-[#606266] cursor-pointer hover:text-[#409EFF]">产品管理</span>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
